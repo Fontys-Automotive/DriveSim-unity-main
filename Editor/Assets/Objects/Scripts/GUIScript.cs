@@ -66,6 +66,9 @@ public class GUIScript : MonoBehaviour {
 	public Texture2D btnPressedSave;
 	public Texture2D btnQuit;
 	public Texture2D btnPressedQuit;
+	//new buttons
+	public Texture2D btnShortCut;
+	public Texture2D btnPressedShortCut;
 	
 	//Scroll textures
 	public Texture2D btnArrowLeft;
@@ -179,6 +182,7 @@ public class GUIScript : MonoBehaviour {
 		menuButtons.Add(btnLoad);
 		menuButtons.Add(btnSave);
 		menuButtons.Add(btnQuit);
+		menuButtons.Add (btnShortCut);
 		
 		menuPressedButtons = new ArrayList();
 		menuPressedButtons.Add(btnPressedLocked);
@@ -188,6 +192,7 @@ public class GUIScript : MonoBehaviour {
 		menuPressedButtons.Add(btnPressedLoad);
 		menuPressedButtons.Add(btnPressedSave);
 		menuPressedButtons.Add(btnPressedQuit);
+		menuPressedButtons.Add (btnPressedShortCut);
 		
 		scrollArrowHeight = (borderStart - borderEnd) + 25;
 		scrollArrowBG = new Texture2D(1, scrollArrowHeight);
@@ -428,6 +433,9 @@ public class GUIScript : MonoBehaviour {
 				}else{
 					GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<OptieGUI> ().guiLock2 = true;
 				}
+			}
+			else if(texture == btnShortCut) {
+				//HelpGUIScript.Show();
 			}
 		}
 	}
