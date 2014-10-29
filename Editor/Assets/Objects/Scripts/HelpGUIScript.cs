@@ -53,4 +53,11 @@ public class HelpGUIScript : MonoBehaviour
 			}
 		}
 	}
+	void Show()
+	{
+		GUI.Label (new Rect (0, 0, 500, 500), bgTex, style);
+		for (int i = 0; i < helpArray.Length; i++) {
+			GUI.Label (new Rect (10, (i + 1) * 15, 500, 25), helpArray [i]);
+		}
+	}
 }
