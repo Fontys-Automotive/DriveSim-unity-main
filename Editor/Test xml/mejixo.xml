@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ObjectList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SavedObjects>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>6</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.00007</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>7</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>3.73386756E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>8</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000076</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>35</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000458</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>36</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>3.73386756E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>37</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>58</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>59</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>60</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>61</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>62</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>63</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>64</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>65</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>66</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>67</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>68</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000076</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>87</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>88</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>89</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>90</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>91</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>92</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>93</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>94</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>95</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>96</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>97</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000153</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>116</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>117</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>118</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>119</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>120</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>121</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>122</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>123</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>124</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>125</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>126</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>149</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000153</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>150</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000153</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>178</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>179</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>180</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>181</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>182</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000076</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>207</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>208</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>209</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>210</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>211</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>234</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>235</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000015</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>236</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000015</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>237</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000076</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>239</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.00007</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>261</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>262</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>263</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000015</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>266</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>267</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>268</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000458</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>291</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>292</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>293</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>294</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>295</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>296</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000153</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>297</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>298</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000015</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>299</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000076</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>320</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>321</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>322</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>323</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>324</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>325</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>3.73386756E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>326</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>327</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000015</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>328</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>348</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>349</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>350</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>353</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>354</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>355</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000458</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>381</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.00007</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>382</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>384</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>410</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>411</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>440</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>469</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>493</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>494</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>495</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>522</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>551</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>580</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>581</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>582</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>609</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.00007</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>610</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.00007</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>611</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.00007</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>667</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>668</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.00007</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>669</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000076</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>696</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>6.46594344E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-bocht-klein">
+      <gridPos>697</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>698</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>718</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000015</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+  </SavedObjects>
+  <gridsize>29</gridsize>
+</ObjectList>

@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: cdfb8a5af69b05941a9b011e2f0412c7
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: A1-050
+    100002: A1-080
+    100004: A1-30
+    100006: A4-050
+    100008: A4-30
+    100010: A4-80
+    100012: B1
+    100014: B2
+    100016: B3
+    100018: B4
+    100020: B5
+    100022: B7
+    100024: Bord
+    100026: Bord 1
+    100028: Bord 2
+    100030: Bord 3
+    100032: Bord 4
+    100034: C1
+    100036: C2
+    100038: Circel
+    100040: Driehoek
+    100042: Paaltje
+    100044: Stop
+    100046: //RootNode
+    100048: Vierkant
+    100050: Vierkant45
+    400000: A1-050
+    400002: A1-080
+    400004: A1-30
+    400006: A4-050
+    400008: A4-30
+    400010: A4-80
+    400012: B1
+    400014: B2
+    400016: B3
+    400018: B4
+    400020: B5
+    400022: B7
+    400024: Bord
+    400026: Bord 1
+    400028: Bord 2
+    400030: Bord 3
+    400032: Bord 4
+    400034: C1
+    400036: C2
+    400038: Circel
+    400040: Driehoek
+    400042: Paaltje
+    400044: Stop
+    400046: //RootNode
+    400048: Vierkant
+    400050: Vierkant45
+    2300000: A1-050
+    2300002: A1-080
+    2300004: A1-30
+    2300006: A4-050
+    2300008: A4-30
+    2300010: A4-80
+    2300012: B1
+    2300014: B2
+    2300016: B3
+    2300018: B4
+    2300020: B5
+    2300022: B7
+    2300024: Bord
+    2300026: Bord 1
+    2300028: Bord 2
+    2300030: Bord 3
+    2300032: Bord 4
+    2300034: C1
+    2300036: C2
+    2300038: Paaltje
+    3300000: A1-050
+    3300002: A1-080
+    3300004: A1-30
+    3300006: A4-050
+    3300008: A4-30
+    3300010: A4-80
+    3300012: B1
+    3300014: B2
+    3300016: B3
+    3300018: B4
+    3300020: B5
+    3300022: B7
+    3300024: Bord
+    3300026: Bord 1
+    3300028: Bord 2
+    3300030: Bord 3
+    3300032: Bord 4
+    3300034: C1
+    3300036: C2
+    3300038: Paaltje
+    4300000: Paaltje
+    4300002: Bord
+    4300004: A4-30
+    4300006: A4-050
+    4300008: A4-80
+    4300010: B1
+    4300012: Bord
+    4300014: B2
+    4300016: Bord
+    4300018: B7
+    4300020: B3
+    4300022: Bord
+    4300024: B4
+    4300026: B5
+    4300028: A1-30
+    4300030: Bord
+    4300032: A1-050
+    4300034: A1-080
+    4300036: C1
+    4300038: C2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

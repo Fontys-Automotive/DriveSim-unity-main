@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: ace54b2b67673b943af8f5028c72e0c2
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - gridMaterial: {fileID: 2100000, guid: 9e617a298b2484c428ade44042b2bf25, type: 2}
+  - selectionQuad: {fileID: 100000, guid: 7d03794e9b329c441ac02c60b5b6dadb, type: 2}
+  - tempSphere: {fileID: 100000, guid: fc686c300a692524eb74b1baeb8f779a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: a5484ec7109c308498c1e56d6c143f98
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Behuizing
+    100002: Beschermkap
+    100004: Licht001
+    100006: Licht002
+    100008: Licht003
+    100010: Paal
+    100012: Paal001
+    100014: //RootNode
+    100016: Zonnekap004
+    100018: Zonnekap005
+    100020: Zonnekap006
+    100022: Zonnekap1
+    100024: Zonnekap2
+    100026: Zonnekap3
+    400000: Behuizing
+    400002: Beschermkap
+    400004: Licht001
+    400006: Licht002
+    400008: Licht003
+    400010: Paal
+    400012: Paal001
+    400014: //RootNode
+    400016: Zonnekap004
+    400018: Zonnekap005
+    400020: Zonnekap006
+    400022: Zonnekap1
+    400024: Zonnekap2
+    400026: Zonnekap3
+    2300000: Behuizing
+    2300002: Beschermkap
+    2300004: Licht001
+    2300006: Licht002
+    2300008: Licht003
+    2300010: Paal001
+    2300012: Zonnekap004
+    2300014: Zonnekap005
+    2300016: Zonnekap006
+    2300018: Zonnekap1
+    2300020: Zonnekap2
+    2300022: Zonnekap3
+    3300000: Behuizing
+    3300002: Beschermkap
+    3300004: Licht001
+    3300006: Licht002
+    3300008: Licht003
+    3300010: Paal001
+    3300012: Zonnekap004
+    3300014: Zonnekap005
+    3300016: Zonnekap006
+    3300018: Zonnekap1
+    3300020: Zonnekap2
+    3300022: Zonnekap3
+    4300000: Zonnekap1
+    4300002: Licht001
+    4300004: Licht003
+    4300006: Zonnekap2
+    4300008: Licht002
+    4300010: Behuizing
+    4300012: Zonnekap3
+    4300014: Beschermkap
+    4300016: Paal001
+    4300018: Zonnekap004
+    4300020: Zonnekap005
+    4300022: Zonnekap006
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

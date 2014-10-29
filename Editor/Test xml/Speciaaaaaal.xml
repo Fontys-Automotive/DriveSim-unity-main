@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ObjectList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SavedObjects>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>140</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>141</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>142</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>143</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>144</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>160</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>1.00179141E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>167</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>168</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>181</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>190</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>191</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>209</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>210</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>211</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>212</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>213</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>226</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000015</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>234</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>235</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>236</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>237</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>238</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>239</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>240</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>241</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>242</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>243</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>244</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>245</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>246</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>251</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>267</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>270</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>272</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000031</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>290</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>293</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>298</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000153</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>303</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>304</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>305</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>306</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>307</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>308</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>309</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>310</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>311</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>312</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>313</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>314</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>315</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>317</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>324</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>325</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>326</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>327</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>328</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>341</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>180.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>343</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>3.73386756E-05</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>351</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>352</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>365</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>374</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>375</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>389</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>270.000061</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>390</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000458</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>393</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>394</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>395</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>396</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-kruispunt">
+      <gridPos>397</gridPos>
+      <degrees>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+    <SavedObject name="bibeko-50-recht">
+      <gridPos>413</gridPos>
+      <degrees>
+        <x>270</x>
+        <y>90.0000458</y>
+        <z>0</z>
+      </degrees>
+    </SavedObject>
+  </SavedObjects>
+  <gridsize>23</gridsize>
+</ObjectList>

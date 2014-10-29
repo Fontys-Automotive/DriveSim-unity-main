@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: bd2fb0941dce1ba458699f4ed9c9a79b
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Stoep
+    100004: Stoep001
+    100006: Stoep002
+    100008: Stoep003
+    100010: Stoepband
+    100012: Stoepband 1
+    100014: Stoepband001
+    100016: Stoepband002
+    100018: Stoepband003
+    100020: Stoepband004
+    100022: Stoepband005
+    100024: Stoepband006
+    100026: Stoepblok
+    100028: Stoepblok 1
+    100030: Stoepblok 2
+    100032: Stoepblok 3
+    400000: //RootNode
+    400002: Stoep
+    400004: Stoep001
+    400006: Stoep002
+    400008: Stoep003
+    400010: Stoepband
+    400012: Stoepband 1
+    400014: Stoepband001
+    400016: Stoepband002
+    400018: Stoepband003
+    400020: Stoepband004
+    400022: Stoepband005
+    400024: Stoepband006
+    400026: Stoepblok
+    400028: Stoepblok 1
+    400030: Stoepblok 2
+    400032: Stoepblok 3
+    2300000: Stoep
+    2300002: Stoep001
+    2300004: Stoep002
+    2300006: Stoep003
+    2300008: Stoepband
+    2300010: Stoepband 1
+    2300012: Stoepband001
+    2300014: Stoepband002
+    2300016: Stoepband003
+    2300018: Stoepband004
+    2300020: Stoepband005
+    2300022: Stoepband006
+    3300000: Stoep
+    3300002: Stoep001
+    3300004: Stoep002
+    3300006: Stoep003
+    3300008: Stoepband
+    3300010: Stoepband 1
+    3300012: Stoepband001
+    3300014: Stoepband002
+    3300016: Stoepband003
+    3300018: Stoepband004
+    3300020: Stoepband005
+    3300022: Stoepband006
+    4300000: Stoep
+    4300002: Stoepband
+    4300004: Stoepband
+    4300006: Stoep001
+    4300008: Stoepband001
+    4300010: Stoepband002
+    4300012: Stoep002
+    4300014: Stoepband003
+    4300016: Stoepband004
+    4300018: Stoep003
+    4300020: Stoepband005
+    4300022: Stoepband006
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

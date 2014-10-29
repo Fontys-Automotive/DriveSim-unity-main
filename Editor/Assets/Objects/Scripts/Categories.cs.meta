@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c5446fbb2e8acb54eb063198638dfeff
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - bibeko50s: {fileID: 2800000, guid: 97e49b320fd05604ab7d17604d15ac0c, type: 3}
+  - bibeko50c: {fileID: 2800000, guid: 951fc7fbddd380d44bafc205aae70171, type: 3}
+  - bibeko50t: {fileID: 2800000, guid: 14ba9a25fbaebdf4494d71b23f8ecdb3, type: 3}
+  - bibeko50i: {fileID: 2800000, guid: ce90bd0ac803cb04b9eb41d68b7e79da, type: 3}
+  - envTree1: {fileID: 2800000, guid: 81ae419604888ba41b0b3dd52c7e547a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

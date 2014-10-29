@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: dc4b6408060a3b641b2ea2f0a4fa1601
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - btnRotateLeft: {fileID: 2800000, guid: 9a91a5a2e8c361e41a7e9de60073f11d, type: 3}
+  - btnPressedRotateLeft: {fileID: 2800000, guid: bea0c78e46a8b72448b2f8b4ac272a10,
+      type: 3}
+  - btnRotateRight: {fileID: 2800000, guid: 42b14dd7ef6cc674bb283441ec13f3a8, type: 3}
+  - btnPressedRotateRight: {fileID: 2800000, guid: 615503203fc3f6145927b0ebcfeeae7c,
+      type: 3}
+  - btnDelete: {fileID: 2800000, guid: aa4e8c4b926e9c449a6cad5030d46908, type: 3}
+  - btnPressedDelete: {fileID: 2800000, guid: cae73d498fe177043aa3f37fa74e18a5, type: 3}
+  - btnImport: {fileID: 2800000, guid: eb738e676b2a6ad4ba581691296352e8, type: 3}
+  - btnPressedImport: {fileID: 2800000, guid: 2211479775ba9144a9924787b587ea9d, type: 3}
+  - btnLocked: {fileID: 2800000, guid: 9c08f6c3f1c168847a031dd9564f34d9, type: 3}
+  - btnPressedLocked: {fileID: 2800000, guid: 5e34930b5d2e31c45bfe7a8445cddb3e, type: 3}
+  - btnBuild: {fileID: 2800000, guid: 51130150cf0896e48b7e27452dc5725b, type: 3}
+  - btnPressedBuild: {fileID: 2800000, guid: b7fe9513171074c489f1c13117361f7b, type: 3}
+  - btnSettings: {fileID: 2800000, guid: 3825ab0f988a7c4478f86516b6a2fcdc, type: 3}
+  - btnPressedSettings: {fileID: 2800000, guid: cbe1bccf8d806194c9c20da08e3fbd7b,
+      type: 3}
+  - btnLoad: {fileID: 2800000, guid: 370cfce53defd1f4abe871accdcf50ae, type: 3}
+  - btnPressedLoad: {fileID: 2800000, guid: 635a1a67b691a0548a688240c598881d, type: 3}
+  - btnSave: {fileID: 2800000, guid: a24ccec7afe52294eb0b75445d7b5beb, type: 3}
+  - btnPressedSave: {fileID: 2800000, guid: 4e3d945dde6fe66499fb2707afe63d68, type: 3}
+  - btnQuit: {fileID: 2800000, guid: 8b009c17dea9bae498d255c1395a6675, type: 3}
+  - btnPressedQuit: {fileID: 2800000, guid: efc44600b45438447bcc5587c0d59b46, type: 3}
+  - btnArrowLeft: {fileID: 2800000, guid: ab6ca2aa252a3f44d9a3e99ae97c3465, type: 3}
+  - btnArrowRight: {fileID: 2800000, guid: dc518489ac964c74bacfc4a5eab1f3bc, type: 3}
+  - bluetoothEmpty: {fileID: 2800000, guid: 0e76662cfd39b194faf6112e909edb24, type: 3}
+  - bluetoothFilled: {fileID: 2800000, guid: 89d4119627e1dcb4da661515b6290e3a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

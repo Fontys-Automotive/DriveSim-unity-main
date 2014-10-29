@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: 3c8395a35167eae458361b711b6753bd
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Fbx_Root
+    100002: Group01
+    100004: Mercedes10
+    100006: Mercedes_0
+    100008: Mercedes_1
+    100010: Mercedes_2
+    100012: Mercedes_3
+    100014: Mercedes_4
+    100016: Mercedes_5
+    100018: Mercedes_6
+    100020: Mercedes_7
+    100022: Mercedes_8
+    100024: Mercedes_9
+    100026: Mercedes_S
+    100028: //RootNode
+    100030: Sun0124.target
+    100032: Wiper_ns
+    400000: Fbx_Root
+    400002: Group01
+    400004: Mercedes10
+    400006: Mercedes_0
+    400008: Mercedes_1
+    400010: Mercedes_2
+    400012: Mercedes_3
+    400014: Mercedes_4
+    400016: Mercedes_5
+    400018: Mercedes_6
+    400020: Mercedes_7
+    400022: Mercedes_8
+    400024: Mercedes_9
+    400026: Mercedes_S
+    400028: //RootNode
+    400030: Sun0124.target
+    400032: Wiper_ns
+    2300000: Mercedes10
+    2300002: Mercedes_0
+    2300004: Mercedes_1
+    2300006: Mercedes_2
+    2300008: Mercedes_3
+    2300010: Mercedes_4
+    2300012: Mercedes_5
+    2300014: Mercedes_6
+    2300016: Mercedes_7
+    2300018: Mercedes_8
+    2300020: Mercedes_9
+    2300022: Wiper_ns
+    3300000: Mercedes10
+    3300002: Mercedes_0
+    3300004: Mercedes_1
+    3300006: Mercedes_2
+    3300008: Mercedes_3
+    3300010: Mercedes_4
+    3300012: Mercedes_5
+    3300014: Mercedes_6
+    3300016: Mercedes_7
+    3300018: Mercedes_8
+    3300020: Mercedes_9
+    3300022: Wiper_ns
+    4300000: Mercedes_0
+    4300002: Mercedes_1
+    4300004: Mercedes_2
+    4300006: Mercedes_3
+    4300008: Mercedes_4
+    4300010: Mercedes_5
+    4300012: Mercedes_6
+    4300014: Mercedes_7
+    4300016: Mercedes_8
+    4300018: Mercedes_9
+    4300020: Mercedes10
+    4300022: Wiper_ns
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

@@ -1,0 +1,111 @@
+fileFormatVersion: 2
+guid: e9c580f5b0d176a439ae6841964056db
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Stoep
+    100004: Stoep Binnenkant
+    100006: Stoep Buitenkant
+    100008: Stoep Buitenkant Vol
+    100010: StoepRand
+    100012: StoepRand 1
+    100014: Stoeprand Buiten
+    100016: Stoeprand Buiten 1
+    100018: StoepRandBinnen
+    100020: StoepRandBinnen001
+    100022: StoepRandBuiten
+    100024: StoepZijkant
+    400000: //RootNode
+    400002: Stoep
+    400004: Stoep Binnenkant
+    400006: Stoep Buitenkant
+    400008: Stoep Buitenkant Vol
+    400010: StoepRand
+    400012: StoepRand 1
+    400014: Stoeprand Buiten
+    400016: Stoeprand Buiten 1
+    400018: StoepRandBinnen
+    400020: StoepRandBinnen001
+    400022: StoepRandBuiten
+    400024: StoepZijkant
+    2300000: Stoep
+    2300002: StoepRand
+    2300004: StoepRand 1
+    2300006: Stoeprand Buiten
+    2300008: Stoeprand Buiten 1
+    2300010: StoepRandBinnen
+    2300012: StoepRandBinnen001
+    2300014: StoepRandBuiten
+    2300016: StoepZijkant
+    3300000: Stoep
+    3300002: StoepRand
+    3300004: StoepRand 1
+    3300006: Stoeprand Buiten
+    3300008: Stoeprand Buiten 1
+    3300010: StoepRandBinnen
+    3300012: StoepRandBinnen001
+    3300014: StoepRandBuiten
+    3300016: StoepZijkant
+    4300000: Stoep
+    4300002: StoepZijkant
+    4300004: StoepRandBinnen
+    4300006: StoepRand
+    4300008: StoepRandBuiten
+    4300010: StoepRand
+    4300012: StoepRandBinnen001
+    4300014: Stoeprand Buiten
+    4300016: Stoeprand Buiten
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
