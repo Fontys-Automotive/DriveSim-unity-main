@@ -227,3 +227,6 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+Editor/Library/metadata/
+Editor/Library/ShaderCache/
