@@ -230,3 +230,5 @@ FakesAssemblies/
 
 Editor/Library/metadata/
 Editor/Library/ShaderCache/
+*.userprefs
+*.csproj
