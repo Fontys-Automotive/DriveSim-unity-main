@@ -8,16 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace AssemblyCSharp
+namespace Engine
 {
 	public class Tyre
 	{
 		private double mass;
 		private double gravity;
 		private double length;
-		private double steerAngle;
-		private double yawVelocity;
-		private double lateralVelocity;
 		private double a, b;
 		private double u; // forward velocity
 		private double Fz0, Fz1, Fz2; //F0 - nominal load; F1 - front axle load; F2 - rear axle load
@@ -28,6 +25,11 @@ namespace AssemblyCSharp
 		private double dFz1,dFz2;
 		private double Cy1, Cy2; //Tyre stiffness 1-front, 2- rear
 		private double eta = 0.03; //understeering factor. Max 0.04
+
+		public double YawVelocity{ get; set; }
+		public double LateralVelocity{ get; set; }
+		public double SteerAngle{ get; set; }
+
 
 
 		public Tyre (double mass, double gravity, double length, double steerAngle, double yawVelocity, double lateralVelocity, double a, double Fz0)
@@ -69,16 +71,12 @@ namespace AssemblyCSharp
 		}
 
 
-
-
-
-
 		// --------
 
 		// SLIP ANGLE
 		private double alphaFront()
 		{
-			double n1 = (yawVelocity * a) + lateralVelocity;
+			double n1 = (YawVelocity * a) + LateralVelocity;
 			double n2 = n1 / u;
 			double n3 = steerAngle - n2;
 
@@ -87,7 +85,7 @@ namespace AssemblyCSharp
 
 		private double alphaRear()
 		{
-			double n1 = (yawVelocity * b) + (lateralVelocity * (-1));
+			double n1 = (YawVelocity * b) + (LateralVelocity * (-1));
 			double n2 = n1 / u;
 
 			return n2;

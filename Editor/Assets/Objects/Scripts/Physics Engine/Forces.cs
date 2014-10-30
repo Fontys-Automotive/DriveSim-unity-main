@@ -8,12 +8,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using System;
-namespace AssemblyCSharp
+namespace Engine
 {
-		public class Forces
-		{
-		private double Fy1, Fy2; //Front and rear wheel force
+	public class Forces
+	{
 		private double a, b;
+
+		public double Fy1 { get; set; } //Front wheel force
+		public double Fy2 { get; set; } // Rear wheel force
+
 		public Forces (double Fy1, double Fy2, double a, double b)
 		{
 			this.Fy1 = Fy1;
