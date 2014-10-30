@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Windows.Forms;
 
 public class GridScript : MonoBehaviour
 {
@@ -134,14 +135,21 @@ public class GridScript : MonoBehaviour
 		}
 		
 		if (Input.GetKeyDown (KeyCode.Delete)) {
-			//ResetGrid (this.verticalGridSize, this.horizontalGridSize);
-			switchDeleteMode ();
+				switchDeleteMode ();
 		}
 
 		if (Input.GetKey (KeyCode.LeftShift) && Input.GetKeyDown (KeyCode.Delete)){
 			Debug.Log("delete all");
-			ResetGrid (yGridSize, xGridSize);
-			switchDeleteMode ();
+			var confirmResult = MessageBox.Show("Are you sure to delete this world?","", MessageBoxButtons.YesNo);
+			if (confirmResult == DialogResult.Yes)
+			{
+				ResetGrid (yGridSize, xGridSize);
+				switchDeleteMode ();
+			}
+			else
+			{
+				return;
+			}
 		}
 
 		if (Input.GetKey (KeyCode.LeftControl) && Input.GetKey (KeyCode.S)) {
@@ -234,7 +242,7 @@ public class GridScript : MonoBehaviour
 				int guiWidth = GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<OptieGUI> ().guiWidth;
 				int guiHeight = GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<GUIScript> ().getGUIHeight ();
 				bool loadSaveBoxActive = GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<GUIScript> ().loadSaveBoxActive ();
-				if (!loadSaveBoxActive && Input.mousePosition.x < (Screen.width - guiWidth) && Input.mousePosition.y > guiHeight) {
+				if (!loadSaveBoxActive && Input.mousePosition.x < (UnityEngine.Screen.width - guiWidth) && Input.mousePosition.y > guiHeight) {
 					if (!deleteMode) {
 						Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 						RaycastHit hit;
