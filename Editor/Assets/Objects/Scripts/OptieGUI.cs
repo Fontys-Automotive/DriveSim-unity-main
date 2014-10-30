@@ -213,22 +213,22 @@ public class OptieGUI : MonoBehaviour
 		carScript.usekeyboard = keyboardon;
 		carScript.usewheel = wheelOn;
 		carScript.usesimulator = simulatorOn;
-		carScript.dragMultiplier.x = drag_x;
-		carScript.dragMultiplier.y = drag_y;
-		carScript.dragMultiplier.z = drag_z;
-		carScript.topSpeed = topSpeedcar;
-		carScript.numberOfGears = numberOfGears;
-		carScript.maximumTurn = maximumTurn;
-		carScript.minimumTurn = minimumTurn;
-		carScript.extremumSlip = extremumSlip;
-		carScript.extremumValue = extremumValue;
-		carScript.asymptoteSlip = asymptoteSlip;
-		carScript.asymptoteValue = asymptoteValue;
-		carScript.stiffness = stiffness;
-		carScript.suspensionRange = suspensionRange;
-		carScript.suspensionDamper = suspensionDamper;
-		carScript.suspensionSpringFront = suspensionSpringFront;
-		carScript.suspensionSpringRear = suspensionSpringRear;
+		carScript.dragMultiplier.x = drag_x >= 1 ? drag_x : 1;
+		carScript.dragMultiplier.y = drag_y >= 1 ? drag_y : 1;
+		carScript.dragMultiplier.z = drag_z >= 1 ? drag_z : 1;
+		carScript.topSpeed = topSpeedcar >= 1 ? topSpeedcar : 1;
+		carScript.numberOfGears = numberOfGears >= 1 ? numberOfGears : 1;
+		carScript.maximumTurn = maximumTurn >= 1 ? maximumTurn : 1;
+		carScript.minimumTurn = minimumTurn >= 1 ? minimumTurn : 1;
+		carScript.extremumSlip = extremumSlip >= 1 ? extremumSlip : 1;
+		carScript.extremumValue = extremumValue >= 1 ? extremumValue : 1;
+		carScript.asymptoteSlip = asymptoteSlip >= 1 ? asymptoteSlip : 1;
+		carScript.asymptoteValue = asymptoteValue >= 1 ? asymptoteValue : 1;
+		carScript.stiffness = stiffness >= 1 ? stiffness : 1;
+		carScript.suspensionRange = suspensionRange >= 1 ? suspensionRange : 1;
+		carScript.suspensionDamper = suspensionDamper >= 1 ? suspensionDamper : 1;
+		carScript.suspensionSpringFront = suspensionSpringFront >= 1 ? suspensionSpringFront : 1;
+		carScript.suspensionSpringRear = suspensionSpringRear >= 1 ? suspensionSpringRear : 1;
 		loadCarValues ();
 	}
 	
