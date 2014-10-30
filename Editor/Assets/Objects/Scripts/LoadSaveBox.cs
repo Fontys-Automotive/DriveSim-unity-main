@@ -124,7 +124,8 @@ public class LoadSaveBox : Object
 				}
 				if (GUI.Button (loadSaveButton, "Save")) {
 					if (legitSaveName ()) {
-
+						if (fileExists(path)){
+						
 						var confirmResult = MessageBox.Show("Are you sure you want to overwrite the file?","", MessageBoxButtons.YesNo);
 						if (confirmResult == DialogResult.Yes)
 						{
@@ -136,6 +137,11 @@ public class LoadSaveBox : Object
 						}
 						;
 						showBox = false;
+						}
+						else{
+							ser.SaveXml(path);
+							showBox = false;
+						}
 					}
 				}
 				GUI.contentColor = Color.white;
