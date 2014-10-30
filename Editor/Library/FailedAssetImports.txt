@@ -1,4 +1,0 @@
-Assets/Models/Gebouwen/01.fbm/fac_05_floors7_tiles17_refl.jpg
-Assets/Standard Assets/Skyboxes/Textures/DawnDusk/DawnDusk_front.tif
-Assets/Standard Assets/Skyboxes/Textures/StarryNight/StarryNight_back.tif
-Assets/Standard Assets/Skyboxes/Textures/Sunny3/Sunny3_up.tif
