@@ -27,7 +27,7 @@ function Start()
 		enabled = false;
 		return;
 	}
-	
+
 	origDetailDist = terrain.detailObjectDistance;
 	origSplatDist = terrain.basemapDistance;
 	origTreeDist = terrain.treeDistance;
@@ -37,8 +37,6 @@ function Start()
 	var distances : float[] = new float[32];
 	distances[16] = Camera.main.farClipPlane;
 	Camera.main.layerCullDistances = distances;
-	//Simon set default graphics quality
-	QualitySettings.SetQualityLevel(3);
 }
 
 function Update ()

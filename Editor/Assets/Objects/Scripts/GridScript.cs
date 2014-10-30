@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Windows.Forms;
 
 public class GridScript : MonoBehaviour
 {
@@ -123,6 +124,46 @@ public class GridScript : MonoBehaviour
 				isGridOn = true;
 			}
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha1)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("1");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha2)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("2");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha3)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("3");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha4)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("4");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha5)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("5");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha6)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("6");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha7)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("7");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha8)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("8");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha9)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("9");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha0)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("0");
+		}
 		
 		//Change key input!
 		if (Input.GetKeyDown (KeyCode.Q)) {
@@ -134,14 +175,21 @@ public class GridScript : MonoBehaviour
 		}
 		
 		if (Input.GetKeyDown (KeyCode.Delete)) {
-			//ResetGrid (this.verticalGridSize, this.horizontalGridSize);
-			switchDeleteMode ();
+				switchDeleteMode ();
 		}
 
 		if (Input.GetKey (KeyCode.LeftShift) && Input.GetKeyDown (KeyCode.Delete)){
 			Debug.Log("delete all");
-			ResetGrid (yGridSize, xGridSize);
-			switchDeleteMode ();
+			var confirmResult = MessageBox.Show("Are you sure to delete this world?","", MessageBoxButtons.YesNo);
+			if (confirmResult == DialogResult.Yes)
+			{
+				ResetGrid (yGridSize, xGridSize);
+				switchDeleteMode ();
+			}
+			else
+			{
+				return;
+			}
 		}
 
 		if (Input.GetKey (KeyCode.LeftControl) && Input.GetKey (KeyCode.S)) {
@@ -234,7 +282,7 @@ public class GridScript : MonoBehaviour
 				int guiWidth = GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<OptieGUI> ().guiWidth;
 				int guiHeight = GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<GUIScript> ().getGUIHeight ();
 				bool loadSaveBoxActive = GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<GUIScript> ().loadSaveBoxActive ();
-				if (!loadSaveBoxActive && Input.mousePosition.x < (Screen.width - guiWidth) && Input.mousePosition.y > guiHeight) {
+				if (!loadSaveBoxActive && Input.mousePosition.x < (UnityEngine.Screen.width - guiWidth) && Input.mousePosition.y > guiHeight) {
 					if (!deleteMode) {
 						Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 						RaycastHit hit;

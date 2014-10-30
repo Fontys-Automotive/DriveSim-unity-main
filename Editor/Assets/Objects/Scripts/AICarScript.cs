@@ -163,7 +163,7 @@ public class AICarScript : MonoBehaviour
 
 		//Special roadtypes, special behaviour
 		//Stopping for stopsign.
-		if (nextRoad.ruleset == Road.Rule.STOP_stop) {
+		if (nextRoad.ruleset == Road.Rule.STOP) {
 			personalMaxSpeed = 0.01f;
 		}
 

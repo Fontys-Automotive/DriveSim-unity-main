@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using System.Windows.Forms;
 
 public class LoadSaveBox : Object
 {
@@ -51,8 +52,8 @@ public class LoadSaveBox : Object
 		bgTex.Apply ();
 		bgStyle.normal.background = bgTex;
 		
-		int boxX = (int)(Screen.width * .5 - boxWidth * .5) - 200;
-		int boxY = (int)(Screen.height * .5 - boxHeight * .5) - 100;
+		int boxX = (int)(UnityEngine.Screen.width * .5 - boxWidth * .5) - 200;
+		int boxY = (int)(UnityEngine.Screen.height * .5 - boxHeight * .5) - 100;
 		
 		loadSaveBox = new Rect (boxX, boxY, boxWidth, boxHeight);
 		inputField = new Rect (boxX + 60, boxY + boxHeight - 50, boxWidth - 65, 20);
@@ -123,8 +124,24 @@ public class LoadSaveBox : Object
 				}
 				if (GUI.Button (loadSaveButton, "Save")) {
 					if (legitSaveName ()) {
-						ser.SaveXml (path);
+						if (fileExists(path)){
+						
+						var confirmResult = MessageBox.Show("Are you sure you want to overwrite the file?","", MessageBoxButtons.YesNo);
+						if (confirmResult == DialogResult.Yes)
+						{
+							ser.SaveXml (path);
+						}
+						else
+						{
+							return;
+						}
+						;
 						showBox = false;
+						}
+						else{
+							ser.SaveXml(path);
+							showBox = false;
+						}
 					}
 				}
 				GUI.contentColor = Color.white;
