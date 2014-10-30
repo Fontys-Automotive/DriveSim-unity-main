@@ -1,4 +1,5 @@
 ﻿<Properties GitUserInfo="UsingGIT">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Objects\Scripts\GridScript.cs">
     <Files>
@@ -15,6 +16,10 @@
       <File FileName="Assets\Objects\Scripts\Category.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+>>>>>>> origin/Simon
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
