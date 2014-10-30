@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CarBehaviour : MonoBehaviour {
+public class CarBehaviour {
 
 	private int mass; // vehicle mass (kg)
 	private float gravity; // acceleration due to gravity m/s2
@@ -9,9 +9,13 @@ public class CarBehaviour : MonoBehaviour {
 	private float a, b ; //a- length from centre to front; b - length from centre to back
 	private int I; //moment of intertia
 	private double u; //forward velocity
+	private double yawVelocity;
+	private double lateralVelocity;
+	private double steerAngle;
+	private	double Fz0; //nominal load
 
 	// Use this for initialization
-	void CarBehaviour () {
+	public CarBehaviour () {
 		mass = 1150;
 		gravity = 9.81;
 		length = 2.66;
@@ -21,15 +25,6 @@ public class CarBehaviour : MonoBehaviour {
 		u = 80 / 3.6;
 	}
 
-	void Start() {
-
-	}
 
 
-
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
