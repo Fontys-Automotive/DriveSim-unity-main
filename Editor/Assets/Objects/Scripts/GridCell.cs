@@ -6,6 +6,7 @@ public class GridCell : MonoBehaviour
 	private int gridId;
 	private int x;
 	private int y;
+
 	private ArrayList occupants = new ArrayList ();
 	private GameObject ghost = null;
 	private bool ghosting = false;
