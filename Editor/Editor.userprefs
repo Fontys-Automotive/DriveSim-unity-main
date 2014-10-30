@@ -1,11 +1,18 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Objects\Scripts\GUIScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Objects\Scripts\GridScript.cs">
     <Files>
-      <File FileName="Assets\Objects\Scripts\HelpGUIScript.cs" Line="64" Column="1" />
-      <File FileName="Assets\Objects\Scripts\GUIScript.cs" Line="440" Column="5" />
-      <File FileName="Assets\Objects\Scripts\LoadSaveBox.cs" Line="127" Column="7" />
+      <File FileName="Assets\Objects\Scripts\GUIScript.cs" Line="19" Column="30" />
+      <File FileName="Assets\Objects\Scripts\HelpGUIScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\LoadSaveBox.cs" Line="1" Column="1" />
       <File FileName="Assets\Objects\Scripts\MultiSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\ObjectList.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\DrawRoad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\SelectObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\OptieGUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\GridScript.cs" Line="261" Column="40" />
+      <File FileName="Assets\Objects\Scripts\Categories.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\Category.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

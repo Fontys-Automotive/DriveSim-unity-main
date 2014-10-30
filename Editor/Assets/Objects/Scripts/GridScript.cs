@@ -124,6 +124,46 @@ public class GridScript : MonoBehaviour
 				isGridOn = true;
 			}
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha1)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("1");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha2)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("2");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha3)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("3");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha4)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("4");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha5)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("5");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha6)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("6");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha7)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("7");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha8)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("8");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha9)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("9");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha0)){
+			objectToPlace = Resources.Load("")as GameObject;
+			MessageBox.Show ("0");
+		}
 		
 		//Change key input!
 		if (Input.GetKeyDown (KeyCode.Q)) {
