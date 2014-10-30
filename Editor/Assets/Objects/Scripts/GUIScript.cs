@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Windows.Forms;
 
 public class GUIScript : MonoBehaviour {
 	
@@ -100,7 +101,7 @@ public class GUIScript : MonoBehaviour {
 		loadAreaFile = new LoadAreaFile();
 		
 		style = new GUIStyle();
-		guiWidth = Screen.width;
+		guiWidth = UnityEngine.Screen.width;
 		guiHeight = 200;
 		bgTex = new Texture2D(1, guiHeight);
 		selectedStyle = new GUIStyle();
@@ -210,9 +211,9 @@ public class GUIScript : MonoBehaviour {
 		loadSaveBox.drawGUI();
 		loadAreaFile.drawGUI();
 		if(!GameObject.FindGameObjectWithTag("MainScripts").GetComponent<SimulationScript>().isSimulationRunning) {
-			int xPos = (int)((Screen.width * .5) - (guiWidth * .5));
-			int yPos = (Screen.height - getGUIHeight());
-			GUI.Label(new Rect (xPos, yPos, Screen.width, 300), bgTex, style);
+			int xPos = (int)((UnityEngine.Screen.width * .5) - (guiWidth * .5));
+			int yPos = (UnityEngine.Screen.height - getGUIHeight());
+			GUI.Label(new Rect (xPos, yPos, UnityEngine.Screen.width, 300), bgTex, style);
 			
 			foreach(Texture2D tex in editorButtons) {
 				int index = editorButtons.IndexOf(tex);
@@ -222,8 +223,8 @@ public class GUIScript : MonoBehaviour {
 			}
 			
 			//Add arrows to scroll the thumbnails
-			int arrowPosY = Screen.height - getGUIHeight() + border + border + editorBtnsHeight - 2;
-			if(GUI.Button(new Rect(Screen.width - scrollArrowWidth, arrowPosY, scrollArrowWidth, scrollArrowHeight), scrollArrowBG, arrowBGStyle)) {
+			int arrowPosY = UnityEngine.Screen.height - getGUIHeight() + border + border + editorBtnsHeight - 2;
+			if(GUI.Button(new Rect(UnityEngine.Screen.width - scrollArrowWidth, arrowPosY, scrollArrowWidth, scrollArrowHeight), scrollArrowBG, arrowBGStyle)) {
 				//Scrollbutton right
 				scrollThumbnails(-thumbnailWidth);
 				
@@ -245,15 +246,15 @@ public class GUIScript : MonoBehaviour {
 			//Draw the menu buttons
 			foreach(Texture2D tex in menuButtons) {
 				int index = menuButtons.IndexOf(tex);
-				int btnPosX = (int)((Screen.width - scrollArrowWidth) - ((menuBtnsWidth + border ) * (menuButtons.Count - index)));
+				int btnPosX = (int)((UnityEngine.Screen.width - scrollArrowWidth) - ((menuBtnsWidth + border ) * (menuButtons.Count - index)));
 				Texture2D pressedTex = (Texture2D)menuPressedButtons[menuButtons.IndexOf(tex)];
 				addBottomButtons(tex, pressedTex, btnPosX);
 			}
 			
 			//Add arrows to scroll the thumbnails
 			//Right
-			GUI.Label(new Rect(Screen.width - scrollArrowWidth, arrowPosY, scrollArrowWidth, scrollArrowHeight), scrollArrowBG, arrowBGStyle);
-			GUI.Label(new Rect(Screen.width - scrollArrowWidth, arrowPosY + (scrollArrowHeight / 6), scrollArrowWidth, scrollArrowHeight), btnArrowRight);
+			GUI.Label(new Rect(UnityEngine.Screen.width - scrollArrowWidth, arrowPosY, scrollArrowWidth, scrollArrowHeight), scrollArrowBG, arrowBGStyle);
+			GUI.Label(new Rect(UnityEngine.Screen.width - scrollArrowWidth, arrowPosY + (scrollArrowHeight / 6), scrollArrowWidth, scrollArrowHeight), btnArrowRight);
 			//Left
 			GUI.Label(new Rect(0, arrowPosY, scrollArrowWidth, scrollArrowHeight), scrollArrowBG, arrowBGStyle);
 			GUI.Label(new Rect(0, arrowPosY + (scrollArrowHeight / 6), scrollArrowWidth, scrollArrowHeight), btnArrowLeft);
@@ -289,8 +290,8 @@ public class GUIScript : MonoBehaviour {
 					btEmptyTimeBetween += (int)(Time.deltaTime * 1000);
 					
 					if(btEmptyShow) {
-						int btLabelX = Screen.width - (bluetoothLabelWidth * 2);
-						int btLabelY = Screen.height - bluetoothLabelHeight - bluetoothLabelWidth;
+						int btLabelX = UnityEngine.Screen.width - (bluetoothLabelWidth * 2);
+						int btLabelY = UnityEngine.Screen.height - bluetoothLabelHeight - bluetoothLabelWidth;
 						GUI.Label (new Rect(btLabelX, btLabelY, bluetoothLabelWidth, bluetoothLabelHeight), bluetoothEmpty);
 					}
 				}
@@ -315,8 +316,8 @@ public class GUIScript : MonoBehaviour {
 					colorWithAlpha.a = btFilledAlpha;
 					GUI.color = colorWithAlpha;
 
-					int btLabelX = Screen.width - (bluetoothLabelWidth * 2);
-					int btLabelY = Screen.height - bluetoothLabelHeight - bluetoothLabelWidth;
+					int btLabelX = UnityEngine.Screen.width - (bluetoothLabelWidth * 2);
+					int btLabelY = UnityEngine.Screen.height - bluetoothLabelHeight - bluetoothLabelWidth;
 					GUI.Label (new Rect(btLabelX, btLabelY, bluetoothLabelWidth, bluetoothLabelHeight), bluetoothFilled);
 
 					GUI.color = currentColor;
@@ -336,10 +337,10 @@ public class GUIScript : MonoBehaviour {
 	}
 
 	private void addTopButtons(Texture2D texture, Texture2D pressedTex, int xPos) {
-		Rect btnRect = new Rect(xPos, Screen.height - getGUIHeight() + border, editorBtnsWidth, editorBtnsHeight);
+		Rect btnRect = new Rect(xPos, UnityEngine.Screen.height - getGUIHeight() + border, editorBtnsWidth, editorBtnsHeight);
 		Texture2D tex = texture;
 		
-		int dfb = (int)(Screen.height - Input.mousePosition.y) - 1;
+		int dfb = (int)(UnityEngine.Screen.height - Input.mousePosition.y) - 1;
 		
 		//Hover top buttons
 		if(btnRect.Contains(new Vector2(Input.mousePosition.x, dfb)) && !Input.GetMouseButton(0)) {
@@ -365,13 +366,13 @@ public class GUIScript : MonoBehaviour {
 	}
 	
 	private void addMiddleButtons(Texture2D texture, int xPos) {
-		Rect btnRect = new Rect(xPos, Screen.height - getGUIHeight() + border + border + editorBtnsHeight, thumbnailWidth, thumbnailHeight);
+		Rect btnRect = new Rect(xPos, UnityEngine.Screen.height - getGUIHeight() + border + border + editorBtnsHeight, thumbnailWidth, thumbnailHeight);
 		Texture2D tex = texture;
 		
-		int dfb = (int)(Screen.height - Input.mousePosition.y) - 1;
+		int dfb = (int)(UnityEngine.Screen.height - Input.mousePosition.y) - 1;
 		
 		//Hover middle buttons
-		if(new Rect(xPos, Screen.height - getGUIHeight() + border + border + editorBtnsHeight, thumbnailWidth, thumbnailHeight).Contains(new Vector2(Input.mousePosition.x, dfb))) {
+		if(new Rect(xPos, UnityEngine.Screen.height - getGUIHeight() + border + border + editorBtnsHeight, thumbnailWidth, thumbnailHeight).Contains(new Vector2(Input.mousePosition.x, dfb))) {
 			GUI.Label(btnRect, hoverTex, hoverStyle);
 		}
 		
@@ -400,10 +401,10 @@ public class GUIScript : MonoBehaviour {
 	}
 	
 	private void addBottomButtons(Texture2D texture, Texture2D pressedTex, int xPos) {
-		Rect btnRect = new Rect(xPos, Screen.height - getGUIHeight() + border, menuBtnsWidth, menuBtnsHeight);
+		Rect btnRect = new Rect(xPos, UnityEngine.Screen.height - getGUIHeight() + border, menuBtnsWidth, menuBtnsHeight);
 		Texture2D tex = texture;
 		
-		int dfb = (int)(Screen.height - Input.mousePosition.y) - 1;
+		int dfb = (int)(UnityEngine.Screen.height - Input.mousePosition.y) - 1;
 		
 		if(btnRect.Contains(new Vector2(Input.mousePosition.x, dfb)) && !Input.GetMouseButton(0)) {
 			tex = pressedTex;
@@ -425,7 +426,7 @@ public class GUIScript : MonoBehaviour {
 				loadSaveBox.openSaveDialog();
 			}
 			else if(texture == btnQuit) {
-				Application.Quit();
+				UnityEngine.Application.Quit();
 			}
 			else if(texture == btnLocked) {
 				if(GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<OptieGUI> ().guiLock2){
@@ -435,7 +436,7 @@ public class GUIScript : MonoBehaviour {
 				}
 			}
 			else if(texture == btnShortCut) {
-				//HelpGUIScript.Show();
+				SendKeys.Send("{F1}");
 			}
 		}
 	}
