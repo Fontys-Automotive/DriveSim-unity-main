@@ -42,7 +42,7 @@ public class HelpGUIScript : MonoBehaviour
 		"O key - Toggle Overlay", "Q & E - Rotate Object Left & Right", "Del key - Toggle Delete Mode",
 		"Enter - Toggle Simulation Mode", "Left Click - Place selected object", "Right Click - Select object in world",
 		"Backspace - Reset camera", "Left Shift + Del key - Clear full grid", "Left Ctrl + S - Save world",
-		"Left Ctrl + O - Load world"};
+		"Left Ctrl + O - Load world", "Z key - Activate AI vehicles"};
 
 	void OnGUI ()
 	{
