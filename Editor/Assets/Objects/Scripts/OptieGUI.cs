@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 public class OptieGUI : MonoBehaviour
 {
@@ -38,6 +39,10 @@ public class OptieGUI : MonoBehaviour
 	private float guiOffsetfloat = 350;
 
 	private GridXmlSerializer ser;
+
+	private Boolean mousePositionKnown = false;
+	float x = 1;
+	float y = 1;
 
 	Car carScript = null;
 	Boolean keyboardon = true;
@@ -82,7 +87,7 @@ public class OptieGUI : MonoBehaviour
 		trafficSignList = new GUIContent[System.Enum.GetValues (typeof(Road.Rule)).Length];
 		style = new GUIStyle ();
 		styleButton = new GUIStyle ();
-		guiHeight = (int)(Screen.height - 150);
+		guiHeight = (int)(UnityEngine.Screen.height - 150);
 
 		gridx = "15";
 		gridy = "15";
@@ -112,27 +117,27 @@ public class OptieGUI : MonoBehaviour
 	{
 		if (guiLock == false) {
 			guiWidth = 400 - guiOffset;
-			if (Input.mousePosition.y < (Screen.height - (Screen.height - GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<GUIScript> ().getGUIHeight ()))) {
+			if (Input.mousePosition.y < (UnityEngine.Screen.height - (UnityEngine.Screen.height - GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<GUIScript> ().getGUIHeight ()))) {
 				if (guiOffset > 0) {
 					guiOffsetfloat -= 10f;
 					guiOffset = (int)guiOffsetfloat;
 				}
 			} else {
-				if (Input.mousePosition.x < (Screen.width - 400)) {
+				if (Input.mousePosition.x < (UnityEngine.Screen.width - 400)) {
 					if (guiOffset < 350) {
 						guiOffsetfloat += 10f;
 						guiOffset = (int)guiOffsetfloat;
 					}
 				}
 			}
-			if (Input.mousePosition.x > (Screen.width - 50)) {
+			if (Input.mousePosition.x > (UnityEngine.Screen.width - 50)) {
 				if (guiOffset > 0) {
 					guiOffsetfloat -= 10f;
 					guiOffset = (int)guiOffsetfloat;
 				}
 			}
 
-			if (Input.mousePosition.x > (Screen.width - 400) && Input.mousePosition.x < (Screen.width - 50) && guiOffset < 350) {
+			if (Input.mousePosition.x > (UnityEngine.Screen.width - 400) && Input.mousePosition.x < (UnityEngine.Screen.width - 50) && guiOffset < 350) {
 				if (guiOffset > 0) {
 					guiOffsetfloat -= 10f;
 					guiOffset = (int)guiOffsetfloat;
@@ -237,17 +242,17 @@ public class OptieGUI : MonoBehaviour
 		//What to do if the grid is selected
 		if (objectSelected == "grid" && GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().multiSelectionActive == false) {
 			GridScript gridScript = GameObject.FindWithTag ("MainCamera").GetComponent<GridScript> ();
-			GUI.Label (new Rect (Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
 
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 10, 100, 50), "Grid X");
-			gridx = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 10, 75, 20), gridx, 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 10, 100, 50), "Grid X");
+			gridx = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 10, 75, 20), gridx, 25);
 			gridx = Regex.Replace (gridx, @"[^0-9]", "");				
 		
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 10, 100, 50), "Grid Y");
-			gridy = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 10, 75, 20), gridy, 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 10, 100, 50), "Grid Y");
+			gridy = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 10, 75, 20), gridy, 25);
 			gridy = Regex.Replace (gridy, @"[^0-9]", "");
 			
-			if (GUI.Button (new Rect (Screen.width - guiWidth + 10 + guiOffset, 50, 100, 50), "Apply")) {
+			if (GUI.Button (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 50, 100, 50), "Apply")) {
 				if (gridx.Length > 0 && gridy.Length > 0) {
 					int gridXint = int.Parse (gridx);
 					int gridYint = int.Parse (gridy);
@@ -258,17 +263,17 @@ public class OptieGUI : MonoBehaviour
 		}
 		if (GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<SelectObject> ().menuSelected == "0none") {
 			if (GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().multiSelectionActive) {
-				GUI.Label (new Rect (Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
+				GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
 				
-				curbmulti = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 10, 150, 50), curbmulti, "Curbs");
-				lightmulti = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 60, 150, 50), lightmulti, "Lightposts");
-				trafficmulti = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 110, 150, 50), trafficmulti, "Traffic Lights");
+				curbmulti = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 10, 150, 50), curbmulti, "Curbs");
+				lightmulti = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 60, 150, 50), lightmulti, "Lightposts");
+				trafficmulti = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 110, 150, 50), trafficmulti, "Traffic Lights");
 
 				//maxspeed
-				GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 10, 100, 50), "Max speed");
+				GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 10, 100, 50), "Max speed");
 				string maxSpeedString = selectedGameobject.GetComponent<Road> ().maxSpeed.ToString ();
 				
-				maxSpeedString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 10, 75, 20), maxSpeedString, 25);
+				maxSpeedString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 10, 75, 20), maxSpeedString, 25);
 				maxSpeedString = Regex.Replace (maxSpeedString, @"[^a-zA-Z0-9 ]", "");
 				int maxSpeed;
 				int.TryParse (maxSpeedString, out maxSpeed);
@@ -283,7 +288,7 @@ public class OptieGUI : MonoBehaviour
 					i++;
 				}
 				
-				if (Popup.List (new Rect (Screen.width - guiWidth + 250 + guiOffset, 50, 150, 20), ref showList, ref entryNumber, currentEntry, trafficSignList, dropdownStyle)) {
+				if (Popup.List (new Rect (UnityEngine.Screen.width - guiWidth + 250 + guiOffset, 50, 150, 20), ref showList, ref entryNumber, currentEntry, trafficSignList, dropdownStyle)) {
 					Road.Rule chosen = (Road.Rule)System.Enum.GetValues (typeof(Road.Rule)).GetValue (entryNumber);
 					GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().setRulesMultiselect(chosen);
 					currentRule = chosen;
@@ -296,7 +301,18 @@ public class OptieGUI : MonoBehaviour
 		//What to do if the road is selected
 		if (objectSelected == "object" && GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().multiSelectionActive == false) {
 			if (selectedGameobject != null && selectedGameobject.layer == 8) {
-				GUI.Label (new Rect (Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
+
+				if (Input.GetKeyDown (KeyCode.Mouse1) && mousePositionKnown == false) {
+					mousePositionKnown = true;
+					x = Input.mousePosition.x;
+					y = guiHeight - Input.mousePosition.y + 100;
+				}
+				GUI.Label(new Rect (/*Screen.width - guiWidth, 0, guiWidth, guiHeight*/x, y, 100,50), bgTex, style);
+				if (GUI.Button (new Rect (x, y, 50, 20), "Apply")) {
+					mousePositionKnown = false;
+					MessageBox.Show(mousePositionKnown.ToString());
+				}
+
 
 				//hassidewalk
 				//bool[] bools = selectedGameobject.GetComponent<Road> ().HasSidewalks ();
@@ -309,19 +325,19 @@ public class OptieGUI : MonoBehaviour
 //				Debug.Log (leftSW);
 //				Debug.Log (rightSW);
 
-				curbs = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 10, 150, 50), curbs, "Curbs");
+				curbs = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 10, 150, 50), curbs, "Curbs");
 				//hasRightCurb = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 60, 150, 50), hasRightCurb, "Right curb");
-				hasLightpost = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 120, 150, 50), hasLightpost, "Lightposts");
-				hasTrafficLight = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 200, 150, 50), hasTrafficLight, "Traffic Lights");
+				hasLightpost = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 120, 150, 50), hasLightpost, "Lightposts");
+				hasTrafficLight = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 200, 150, 50), hasTrafficLight, "Traffic Lights");
 
 				selectedGameobject.GetComponent<Road> ().SetSidewalks (curbs);
 				selectedGameobject.GetComponent<Road> ().SetLightposts (hasLightpost);
 				selectedGameobject.GetComponent<Road> ().SetTrafficLight (hasTrafficLight);
 				//maxspeed
-				GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 10, 100, 50), "Max speed");
+				GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 10, 100, 50), "Max speed");
 				string maxSpeedString = selectedGameobject.GetComponent<Road> ().maxSpeed.ToString ();
 				
-				maxSpeedString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 10, 75, 20), maxSpeedString, 25);
+				maxSpeedString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 10, 75, 20), maxSpeedString, 25);
 				maxSpeedString = Regex.Replace (maxSpeedString, @"[^a-zA-Z0-9 ]", "");
 				int maxSpeed;
 				int.TryParse (maxSpeedString, out maxSpeed);
@@ -339,7 +355,7 @@ public class OptieGUI : MonoBehaviour
 					i++;
 				}
 				
-				if (Popup.List (new Rect (Screen.width - guiWidth + 250 + guiOffset, 50, 150, 20), ref showList, ref entryNumber, currentEntry, trafficSignList, dropdownStyle)) {
+				if (Popup.List (new Rect (UnityEngine.Screen.width - guiWidth + 250 + guiOffset, 50, 150, 20), ref showList, ref entryNumber, currentEntry, trafficSignList, dropdownStyle)) {
 					Road.Rule chosen = (Road.Rule)System.Enum.GetValues (typeof(Road.Rule)).GetValue (entryNumber);
 					selectedGameobject.GetComponent<Road> ().SetRules (chosen, true);
 				}
@@ -348,12 +364,12 @@ public class OptieGUI : MonoBehaviour
 		}
 		
 		if (objectSelected == "car" && GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().multiSelectionActive == false) {
-			GUI.Label (new Rect (Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
 			
 			//keyboard
-			keyboardon = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 10, 100, 20), keyboardon, "Use Keyboard");
-			simulatorOn = GUI.Toggle (new Rect (Screen.width - guiWidth + 160 + guiOffset, 10, 100, 20), simulatorOn, "Use Simulator");
-			wheelOn = GUI.Toggle (new Rect (Screen.width - guiWidth + 310 + guiOffset, 10, 100, 20), wheelOn, "Use Wheel");
+			keyboardon = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 10, 100, 20), keyboardon, "Use Keyboard");
+			simulatorOn = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 160 + guiOffset, 10, 100, 20), simulatorOn, "Use Simulator");
+			wheelOn = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 10, 100, 20), wheelOn, "Use Wheel");
 
 			if(keyboardon == true && prevKeyboardOn == false) {
 				simulatorOn = false;
@@ -383,16 +399,16 @@ public class OptieGUI : MonoBehaviour
 			string dragMpl_yString = "";
 			string dragMpl_zString = "";
 			//drag x
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 50, 100, 50), "Dragmultiplier X");
-			dragMpl_xString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 50, 75, 20), drag_x.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 50, 100, 50), "Dragmultiplier X");
+			dragMpl_xString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 50, 75, 20), drag_x.ToString (), 25);
 							
 			//drag y
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 50, 100, 50), "Dragmultiplier Y");
-			dragMpl_yString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 50, 75, 20), drag_y.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 50, 100, 50), "Dragmultiplier Y");
+			dragMpl_yString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 50, 75, 20), drag_y.ToString (), 25);
 			
 			//drag z
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 90, 100, 50), "Dragmultiplier Z");
-			dragMpl_zString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 90, 75, 20), drag_z.ToString (), 25);						
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 90, 100, 50), "Dragmultiplier Z");
+			dragMpl_zString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 90, 75, 20), drag_z.ToString (), 25);						
 
 			int.TryParse (dragMpl_xString, out drag_x);
 			int.TryParse (dragMpl_yString, out drag_y);
@@ -400,88 +416,88 @@ public class OptieGUI : MonoBehaviour
 		
 			//topspeed
 			string carSpeedString;
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 90, 100, 50), "Top speed");				
-			carSpeedString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 90, 75, 20), topSpeedcar.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 90, 100, 50), "Top speed");				
+			carSpeedString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 90, 75, 20), topSpeedcar.ToString (), 25);
 			int.TryParse (carSpeedString, out topSpeedcar);
 			
 			//numbergears
 			string numberOfGearsString;
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 130, 100, 50), "Number of gears");
-			numberOfGearsString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 130, 75, 20), numberOfGears.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 130, 100, 50), "Number of gears");
+			numberOfGearsString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 130, 75, 20), numberOfGears.ToString (), 25);
 			int.TryParse (numberOfGearsString, out numberOfGears);
 				
 			//maxturn
 			string maxTurnString;
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 130, 100, 50), "Max turn");
-			maxTurnString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 130, 75, 20), maximumTurn.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 130, 100, 50), "Max turn");
+			maxTurnString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 130, 75, 20), maximumTurn.ToString (), 25);
 			int.TryParse (maxTurnString, out maximumTurn);
 			
 			//minturn
 			string minTurnString;
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 170, 100, 50), "Min turn");
-			minTurnString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 170, 75, 20), minimumTurn.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 170, 100, 50), "Min turn");
+			minTurnString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 170, 75, 20), minimumTurn.ToString (), 25);
 			int.TryParse (minTurnString, out minimumTurn);
 			
 			//extremumSlip
 			string extremumSlipString;
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 170, 100, 50), "Extremum slip");
-			extremumSlipString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 170, 75, 20), extremumSlip.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 170, 100, 50), "Extremum slip");
+			extremumSlipString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 170, 75, 20), extremumSlip.ToString (), 25);
 			int.TryParse (extremumSlipString, out extremumSlip);
 			
 			//extremumValue
 			string exValueString;
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 210, 100, 50), "Extremum value");
-			exValueString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 210, 75, 20), extremumValue.ToString (), 25);
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 210, 100, 50), "Extremum value");
+			exValueString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 210, 75, 20), extremumValue.ToString (), 25);
 			int.TryParse (exValueString, out extremumValue);
 			
 			//asymptoteSlip
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 210, 100, 50), "Asymptote Slip");
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 210, 100, 50), "Asymptote Slip");
 			string asSlipString;
-			asSlipString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 210, 75, 20), asymptoteSlip.ToString (), 25);
+			asSlipString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 210, 75, 20), asymptoteSlip.ToString (), 25);
 			int.TryParse (asSlipString, out asymptoteSlip);
 			
 			//asymptoteValue
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 250, 100, 50), "Asymptote value");
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 250, 100, 50), "Asymptote value");
 			string asValueString;
-			asValueString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 250, 75, 20), asymptoteValue.ToString (), 25);
+			asValueString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 250, 75, 20), asymptoteValue.ToString (), 25);
 			int.TryParse (asValueString, out asymptoteValue);
 			
 			//stiffness
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 250, 100, 50), "Stiffness");
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 250, 100, 50), "Stiffness");
 			string stifString;
-			stifString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 250, 75, 20), stiffness.ToString (), 25);
+			stifString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 250, 75, 20), stiffness.ToString (), 25);
 			int.TryParse (stifString, out stiffness);
 			
 			//suspensionRange
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 290, 100, 50), "Suspension range");
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 290, 100, 50), "Suspension range");
 			string susString;
-			susString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 290, 75, 20), suspensionRange.ToString (), 25);
+			susString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 290, 75, 20), suspensionRange.ToString (), 25);
 			int.TryParse (susString, out suspensionRange);
 			
 			//suspensionDamper
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 290, 100, 50), "Suspension damper");
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 290, 100, 50), "Suspension damper");
 			string damperString;			
-			damperString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 290, 75, 20), suspensionDamper.ToString (), 25);
+			damperString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 290, 75, 20), suspensionDamper.ToString (), 25);
 			int.TryParse (damperString, out suspensionDamper);
 			
 			//suspensionSpringFront
-			GUI.Label (new Rect (Screen.width - guiWidth + 210 + guiOffset, 330, 100, 50), "Suspension front");
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 330, 100, 50), "Suspension front");
 			string springFrontString;
-			springFrontString = GUI.TextField (new Rect (Screen.width - guiWidth + 310 + guiOffset, 330, 75, 20), suspensionSpringFront.ToString (), 25);
+			springFrontString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 330, 75, 20), suspensionSpringFront.ToString (), 25);
 			int.TryParse (springFrontString, out suspensionSpringFront);
 			
 			//suspensionSpringRear
-			GUI.Label (new Rect (Screen.width - guiWidth + 10 + guiOffset, 330, 100, 50), "Suspension rear");
+			GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 330, 100, 50), "Suspension rear");
 			string springRearString;
-			springRearString = GUI.TextField (new Rect (Screen.width - guiWidth + 110 + guiOffset, 330, 75, 20), suspensionSpringRear.ToString (), 25);
+			springRearString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 110 + guiOffset, 330, 75, 20), suspensionSpringRear.ToString (), 25);
 			int.TryParse (springRearString, out suspensionSpringRear);
 
-			if (GUI.Button (new Rect (Screen.width - guiWidth + 210 + guiOffset, 370, 70, 50), "Apply")) {
+			if (GUI.Button (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 370, 70, 50), "Apply")) {
 				saveCarValues ();
 			}
 		}
 		if (objectSelected == "car" || objectSelected == "grid" || objectSelected == "object") {
-			if (GUI.Button (new Rect (Screen.width - guiWidth + 10 + guiOffset, 370, 70, 50), lockTexture)) {
+			if (GUI.Button (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 370, 70, 50), lockTexture)) {
 				if (guiLock) {
 					lockTexture = btnLockOpen;
 					guiLock = false;

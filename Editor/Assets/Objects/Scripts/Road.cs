@@ -165,7 +165,6 @@ public class Road : MonoBehaviour
 		if (lPostsT != null) {
 			lPostsT.gameObject.SetActive (b); 
 		}
-
 	}
 
 	public bool HasLightposts ()

@@ -296,12 +296,13 @@ public class GridScript : MonoBehaviour
 							if (hit.transform.gameObject.tag == "grid") {
 								GridCell cellScript = hit.transform.GetComponent<GridCell> ();
 								placeItem.PlaceObject (cellScript, objectToPlace);
+
 							}
-							
+							/*
 							//If it's a selectable object... Select it!
-	//						if (hit.transform.gameObject.tag == "object") {
-	//							//objectToPlace = hit.transform.gameObject;
-	//						}		
+							if (hit.transform.gameObject.tag == "object") {
+								objectToPlace = hit.transform.gameObject;
+							}	*/	
 						}
 					} else {
 						//Debug.Log ("Delete ray");
