@@ -21,6 +21,7 @@ namespace Engine
 		private double C1, C2; // form factor
 		private double D1, D2; //peak factor
 		private double B1, B2; //stiffness factor
+		private double K1, K2;
 		private double mu1, mu2; //friction factor
 		private double dFz1,dFz2;
 		private double Cy1, Cy2; //Tyre stiffness 1-front, 2- rear
@@ -34,16 +35,16 @@ namespace Engine
 
 		public Tyre (double mass, double gravity, double length, double steerAngle, double yawVelocity, double lateralVelocity, double a, double Fz0)
 		{
-			this.steerAngle = steerAngle;
-			this.yawVelocity = yawVelocity;
-			this.lateralVelocity = lateralVelocity;
+			this.SteerAngle = steerAngle;
+			this.YawVelocity = yawVelocity;
+			this.LateralVelocity = lateralVelocity;
 			this.a = a;
 			this.b = b;
 			this.C1 = this.C2 = 1.19;
 			this.mass = mass;
 			this.gravity = gravity;
 			this.length = length;
-			this.Fz0 = F0;
+			this.Fz0 = Fz0;
 			this.Fz1 = (mass * gravity * b) / length;
 			this.Fz2 = (mass * gravity * a) / length;
 			this.dFz1 = (Fz1 - Fz0) / Fz0;
@@ -63,11 +64,11 @@ namespace Engine
 		//TYRE FORCE
 		public double tyreForceFront()
 		{
-			return alphaFront * Cy1;
+			return alphaFront() * Cy1;
 		}
 		public double tyreForceRear()
 		{
-			return alphaRear * Cy2;
+			return alphaRear() * Cy2;
 		}
 
 
@@ -78,7 +79,7 @@ namespace Engine
 		{
 			double n1 = (YawVelocity * a) + LateralVelocity;
 			double n2 = n1 / u;
-			double n3 = steerAngle - n2;
+			double n3 = SteerAngle - n2;
 
 			return n3;
 		}

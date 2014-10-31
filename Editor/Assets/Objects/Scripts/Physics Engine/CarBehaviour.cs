@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace Engine{
 	public class CarBehaviour {
@@ -15,16 +14,16 @@ namespace Engine{
 		private	double Fz0; //nominal load
 		private Tyre tyre;
 		private Forces forces;
-		private Movement movement;
+		public Movement movement;//?
 		private double yawVelocityRadians;
 		private double lateralVelocity;
 
 		// Use this for initialization
 		public CarBehaviour(double steerAngleRadians) {
 			mass = 1150;
-			gravity = 9.81;
-			length = 2.66;
-			a = 1.06;
+			gravity = 9.81f;
+			length = 2.66f;
+			a = 1.06f;
 			b = length - a;
 			I = 1850;
 			forwardVelocity = 80 / 3.6;
@@ -36,7 +35,7 @@ namespace Engine{
 			
 			this.tyre = new Tyre (mass, gravity, length, steerAngleRadians, yawVelocityRadians, lateralVelocity, a, Fz0);
 			this.forces = new Forces (this.tyre.tyreForceFront(), this.tyre.tyreForceRear(), this.a, this.b);
-			this.movement = new Movement (this.forces.FyTotal, this.forces.MzMoment, this.I, this.forwardVelocity); 
+			this.movement = new Movement (this.forces.FyTotal(), this.forces.MzMoment(), this.I, this.forwardVelocity, this.mass);
 		}
 
 		public Dictionary<string, double> Run()
@@ -61,7 +60,7 @@ namespace Engine{
 
 		public double acceleration()
 		{
-			double n1 = movement.accelerationY + (movement.yawVelocity * forwardVelocity);
+			double n1 = movement.accelerationY() + (movement.yawVelocity() * this.forwardVelocity);
 			double n2 = n1 / gravity;
 
 			return n2;
@@ -69,23 +68,25 @@ namespace Engine{
 
 		public double yawVelocity()
 		{
-			return movement.yawVelocity * (180 / Math.PI);
+			return movement.yawVelocity() * (180 / Math.PI);
 		}
 
 		public double steerAngleDegrees()
 		{
-			double n1 = Math.Atan(movement.lateralVelocity / forwardVelocity);
+			double n1 = Math.Atan(movement.lateralVelocity() / forwardVelocity);
 			double n2 = n1 * (180 / Math.PI);
 
 			return n2;
 
 		}
-		public Point calculatePositionChange()
+		//TO-DO
+		public int[,] calculatePositionChange()
 		{
-			double x = (forwardVelocity * Math.Cos(steerAngleDegrees)) - (lateralVelocity * Math.Sin(steerAngleDegrees));
-			double y = (forwardVelocity * Math.Sin (steerAngleDegrees)) - (lateralVelocity * Math.Cos(steerAngleDegrees));
 
-			return new Point (x, y);
+			//int x = (forwardVelocity * Math.Cos(steerAngleDegrees)) - (lateralVelocity * Math.Sin(steerAngleDegrees()));
+			//int y = (forwardVelocity * Math.Sin (steerAngleDegrees)) - (lateralVelocity * Math.Cos(steerAngleDegrees()));
+
+			return new int[0,0];
 		}
 	}
 }

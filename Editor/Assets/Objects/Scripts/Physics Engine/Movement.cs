@@ -15,31 +15,35 @@ namespace Engine
 		private double time;
 		private double I; //Moment of Inertia
 		private double forwardVelocity;
-
+		private double mass;
 		public double FyTotal{ get; set; }
 		public double MzTotal{ get; set; }
 
-		public Movement (double FyTotal, double MzTotal, double I, double forwardVelocity)
+		public Movement (double FyTotal, double MzTotal, double I, double forwardVelocity, double mass)
 		{
 			this.forwardVelocity = forwardVelocity;
 			this.MzTotal = MzTotal;
 			this.FyTotal = FyTotal;
 			this.I = I;
+			this.mass = mass;
 		}
 		public double yawVelocity()
 		{
-			double n1 = (MzTotal / I) / time;
-			return n1;
+			//TO-DO
+			double integrated = (MzTotal / I);
+
+			return integrated;
 		}
 		public double accelerationY()
 		{
-			double result = (FyTotal / mass) - (yawVelocity() * v);
+			//TO CHECK if lateralVelocity is the value here
+			double result = (this.FyTotal / mass) - (yawVelocity() * lateralVelocity());
 			return result;
 		}
 
 		public double lateralVelocity()
 		{
-			double result = accelerationY * time;
+			double result = accelerationY() * time;
 			return result;
 		}
 
