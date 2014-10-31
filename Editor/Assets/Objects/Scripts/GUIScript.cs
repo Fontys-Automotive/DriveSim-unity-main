@@ -75,6 +75,9 @@ public class GUIScript : MonoBehaviour {
 	public Texture2D btnArrowLeft;
 	public Texture2D btnArrowRight;
 
+	//Bool to check if current world is already saved
+	public bool worldSaved;
+
 	//Bluetooth textures
 	public Texture2D bluetoothEmpty;
 	public Texture2D bluetoothFilled;
@@ -99,6 +102,7 @@ public class GUIScript : MonoBehaviour {
 		categories = new Categories();
 		loadSaveBox = new LoadSaveBox();
 		loadAreaFile = new LoadAreaFile();
+		worldSaved = false;
 		
 		style = new GUIStyle();
 		guiWidth = UnityEngine.Screen.width;
@@ -420,7 +424,15 @@ public class GUIScript : MonoBehaviour {
 				loadAreaFile.show();
 			}
 			else if(texture == btnLoad) {
-				loadSaveBox.openLoadDialog();
+				var confirmResult = MessageBox.Show("Do you want to save the current world before loading?","", MessageBoxButtons.YesNo);
+				if (confirmResult == DialogResult.Yes)
+				{
+					loadSaveBox.openSaveDialog();
+				}
+				else
+				{
+					loadSaveBox.openLoadDialog();
+				}
 			}
 			else if(texture == btnSave) {
 				loadSaveBox.openSaveDialog();

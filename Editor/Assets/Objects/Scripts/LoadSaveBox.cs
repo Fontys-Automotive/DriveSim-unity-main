@@ -34,7 +34,6 @@ public class LoadSaveBox : Object
 	private Texture2D selectedFileTex = new Texture2D (1, 1);
 	private GUIStyle deselectedStyle = new GUIStyle ();
 	private GUIStyle selectedStyle = new GUIStyle ();
-
 	private string extension = ".nlb";
 
 	//Needed for saving/loading
@@ -51,7 +50,7 @@ public class LoadSaveBox : Object
 		bgTex.SetPixel (0, 0, new Color (0f, 0f, 0f, .75f));
 		bgTex.Apply ();
 		bgStyle.normal.background = bgTex;
-		
+
 		int boxX = (int)(UnityEngine.Screen.width * .5 - boxWidth * .5) - 200;
 		int boxY = (int)(UnityEngine.Screen.height * .5 - boxHeight * .5) - 100;
 		
