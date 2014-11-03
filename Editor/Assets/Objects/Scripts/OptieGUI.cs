@@ -305,12 +305,12 @@ public class OptieGUI : MonoBehaviour
 				if (Input.GetKeyDown (KeyCode.Mouse1) && mousePositionKnown == false) {
 					mousePositionKnown = true;
 					x = Input.mousePosition.x;
-					y = guiHeight - Input.mousePosition.y + 100;
+					y = guiHeight - Input.mousePosition.y + 50;
+
 				}
-				GUI.Label(new Rect (/*Screen.width - guiWidth, 0, guiWidth, guiHeight*/x, y, 100,50), bgTex, style);
-				if (GUI.Button (new Rect (x, y, 50, 20), "Apply")) {
+				GUI.Label(new Rect (/*Screen.width - guiWidth, 0, guiWidth, guiHeight*/x, y, 200,150), bgTex, style);
+				if (GUI.Button (new Rect (x + 5, y + 125, 50, 20), "Apply")) {
 					mousePositionKnown = false;
-					MessageBox.Show(mousePositionKnown.ToString());
 				}
 
 
@@ -325,19 +325,19 @@ public class OptieGUI : MonoBehaviour
 //				Debug.Log (leftSW);
 //				Debug.Log (rightSW);
 
-				curbs = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 10, 150, 50), curbs, "Curbs");
+				curbs = GUI.Toggle (new Rect (x, y, 150, 50), curbs, "Curbs");
 				//hasRightCurb = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 60, 150, 50), hasRightCurb, "Right curb");
-				hasLightpost = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 120, 150, 50), hasLightpost, "Lightposts");
-				hasTrafficLight = GUI.Toggle (new Rect (UnityEngine.Screen.width - guiWidth + 10 + guiOffset, 200, 150, 50), hasTrafficLight, "Traffic Lights");
+				hasLightpost = GUI.Toggle (new Rect (x, y + 20, 150, 50), hasLightpost, "Lightposts");
+				hasTrafficLight = GUI.Toggle (new Rect (x, y + 40, 150, 50), hasTrafficLight, "Traffic Lights");
 
 				selectedGameobject.GetComponent<Road> ().SetSidewalks (curbs);
 				selectedGameobject.GetComponent<Road> ().SetLightposts (hasLightpost);
 				selectedGameobject.GetComponent<Road> ().SetTrafficLight (hasTrafficLight);
 				//maxspeed
-				GUI.Label (new Rect (UnityEngine.Screen.width - guiWidth + 210 + guiOffset, 10, 100, 50), "Max speed");
+				GUI.Label (new Rect (x + 5, y + 60, 100, 50), "Max speed");
 				string maxSpeedString = selectedGameobject.GetComponent<Road> ().maxSpeed.ToString ();
 				
-				maxSpeedString = GUI.TextField (new Rect (UnityEngine.Screen.width - guiWidth + 310 + guiOffset, 10, 75, 20), maxSpeedString, 25);
+				maxSpeedString = GUI.TextField (new Rect (x + 100, y + 60, 75, 20), maxSpeedString, 25);
 				maxSpeedString = Regex.Replace (maxSpeedString, @"[^a-zA-Z0-9 ]", "");
 				int maxSpeed;
 				int.TryParse (maxSpeedString, out maxSpeed);
@@ -355,7 +355,7 @@ public class OptieGUI : MonoBehaviour
 					i++;
 				}
 				
-				if (Popup.List (new Rect (UnityEngine.Screen.width - guiWidth + 250 + guiOffset, 50, 150, 20), ref showList, ref entryNumber, currentEntry, trafficSignList, dropdownStyle)) {
+				if (Popup.List (new Rect (x + 5, y + 90, 150, 20), ref showList, ref entryNumber, currentEntry, trafficSignList, dropdownStyle)) {
 					Road.Rule chosen = (Road.Rule)System.Enum.GetValues (typeof(Road.Rule)).GetValue (entryNumber);
 					selectedGameobject.GetComponent<Road> ().SetRules (chosen, true);
 				}
