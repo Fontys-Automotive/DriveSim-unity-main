@@ -303,16 +303,12 @@ public class OptieGUI : MonoBehaviour
 			if (selectedGameobject != null && selectedGameobject.layer == 8) {
 
 				if (Input.GetKeyDown (KeyCode.Mouse1) && mousePositionKnown == false) {
-					mousePositionKnown = true;
 					x = Input.mousePosition.x;
 					y = guiHeight - Input.mousePosition.y + 50;
-
+					mousePositionKnown = true;
 				}
+
 				GUI.Label(new Rect (/*Screen.width - guiWidth, 0, guiWidth, guiHeight*/x, y, 200,150), bgTex, style);
-				if (GUI.Button (new Rect (x + 5, y + 125, 50, 20), "Apply")) {
-					mousePositionKnown = false;
-				}
-
 
 				//hassidewalk
 				//bool[] bools = selectedGameobject.GetComponent<Road> ().HasSidewalks ();
@@ -322,11 +318,11 @@ public class OptieGUI : MonoBehaviour
 
 				bool hasLightpost = selectedGameobject.GetComponent<Road> ().HasLightposts ();
 				bool hasTrafficLight = selectedGameobject.GetComponent<Road> ().HasTrafficLightBoolean ();
-//				Debug.Log (leftSW);
-//				Debug.Log (rightSW);
+	//				Debug.Log (leftSW);
+	//				Debug.Log (rightSW);
 
 				curbs = GUI.Toggle (new Rect (x, y, 150, 50), curbs, "Curbs");
-				//hasRightCurb = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 60, 150, 50), hasRightCurb, "Right curb");
+					//hasRightCurb = GUI.Toggle (new Rect (Screen.width - guiWidth + 10 + guiOffset, 60, 150, 50), hasRightCurb, "Right curb");
 				hasLightpost = GUI.Toggle (new Rect (x, y + 20, 150, 50), hasLightpost, "Lightposts");
 				hasTrafficLight = GUI.Toggle (new Rect (x, y + 40, 150, 50), hasTrafficLight, "Traffic Lights");
 
@@ -336,7 +332,7 @@ public class OptieGUI : MonoBehaviour
 				//maxspeed
 				GUI.Label (new Rect (x + 5, y + 60, 100, 50), "Max speed");
 				string maxSpeedString = selectedGameobject.GetComponent<Road> ().maxSpeed.ToString ();
-				
+					
 				maxSpeedString = GUI.TextField (new Rect (x + 100, y + 60, 75, 20), maxSpeedString, 25);
 				maxSpeedString = Regex.Replace (maxSpeedString, @"[^a-zA-Z0-9 ]", "");
 				int maxSpeed;
@@ -344,22 +340,24 @@ public class OptieGUI : MonoBehaviour
 				if (maxSpeed > 0) {
 					selectedGameobject.GetComponent<Road> ().maxSpeed = maxSpeed;
 				}
-				
+					
 				GUIContent currentEntry = new GUIContent (selectedGameobject.GetComponent<Road> ().GetRules ().ToString ());
 				int i = 0;
 				int entryNumber = 0;
 				foreach (var sign in System.Enum.GetValues(typeof(Road.Rule))) {
 					trafficSignList [i] = new GUIContent (sign.ToString ());
-					if (trafficSignList [i].ToString () == currentEntry.ToString ())
-						entryNumber = i;
+				if (trafficSignList [i].ToString () == currentEntry.ToString ())
+					entryNumber = i;
 					i++;
 				}
-				
-				if (Popup.List (new Rect (x + 5, y + 90, 150, 20), ref showList, ref entryNumber, currentEntry, trafficSignList, dropdownStyle)) {
+					
+				if (GUI.Button (new Rect (x + 5, y + 125, 50, 20), "Apply")) {
+					this.enabled = false;
 					Road.Rule chosen = (Road.Rule)System.Enum.GetValues (typeof(Road.Rule)).GetValue (entryNumber);
 					selectedGameobject.GetComponent<Road> ().SetRules (chosen, true);
+					mousePositionKnown = false;
 				}
-				
+
 			} 
 		}
 		

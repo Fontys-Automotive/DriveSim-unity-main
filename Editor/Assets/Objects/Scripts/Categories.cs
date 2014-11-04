@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using System.Windows.Forms;
 
 public class Categories : Object
 {
@@ -25,7 +26,7 @@ public class Categories : Object
 	{
 		categories = new ArrayList ();
 		
-		string imagesFolder = Application.dataPath + "/Resources/guiImages";
+		string imagesFolder = UnityEngine.Application.dataPath + "/Resources/guiImages";
 		string[] files = Directory.GetDirectories (imagesFolder);
 		
 		foreach (string s in files) {
