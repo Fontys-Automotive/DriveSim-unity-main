@@ -11,7 +11,7 @@ public class CameraScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		defaultPos = new Vector3 (50, 100, -10);
+		defaultPos = new Vector3 (50, 100,-10 );
 		this.gameObject.transform.position = defaultPos;
 		this.gameObject.transform.eulerAngles = new Vector3 (90, 0, 0);
 	}
@@ -29,7 +29,7 @@ public class CameraScript : MonoBehaviour
 			transform.position = Vector3.Lerp(transform.position,defaultPos,Time.deltaTime * smoothFactor);
 			
 			//If camera is near default, stop defaulting
-			if(Vector3.Distance(transform.position,defaultPos) < 50f)
+			if(Vector3.Distance(transform.position,defaultPos) < 2f)
 			{
 				defaulting = false;
 			}

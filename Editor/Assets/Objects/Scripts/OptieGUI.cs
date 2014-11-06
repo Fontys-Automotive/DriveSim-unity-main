@@ -39,8 +39,7 @@ public class OptieGUI : MonoBehaviour
 	private float guiOffsetfloat = 350;
 
 	private GridXmlSerializer ser;
-
-	private Boolean mousePositionKnown = false;
+	
 	float x = 1;
 	float y = 1;
 
@@ -302,10 +301,10 @@ public class OptieGUI : MonoBehaviour
 		if (objectSelected == "object" && GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().multiSelectionActive == false) {
 			if (selectedGameobject != null && selectedGameobject.layer == 8) {
 
-				if (Input.GetKeyDown (KeyCode.Mouse1) && mousePositionKnown == false) {
+			if (Input.GetKeyDown (KeyCode.Mouse1)) {
+					this.enabled = true;
 					x = Input.mousePosition.x;
 					y = guiHeight - Input.mousePosition.y + 50;
-					mousePositionKnown = true;
 				}
 
 				GUI.Label(new Rect (/*Screen.width - guiWidth, 0, guiWidth, guiHeight*/x, y, 200,150), bgTex, style);
@@ -355,9 +354,7 @@ public class OptieGUI : MonoBehaviour
 					this.enabled = false;
 					Road.Rule chosen = (Road.Rule)System.Enum.GetValues (typeof(Road.Rule)).GetValue (entryNumber);
 					selectedGameobject.GetComponent<Road> ().SetRules (chosen, true);
-					mousePositionKnown = false;
 				}
-
 			} 
 		}
 		
