@@ -107,9 +107,9 @@ public class SimulationScript : MonoBehaviour
 
 		worldgrass = GameObject.FindGameObjectWithTag ("grass");
 		worldgrass.transform.position = new Vector3 (0, 1000, 0);
-//		if (instantiatedCar != null) {
-//			GameObject.Destroy (instantiatedCar.gameObject);
-//		}
+		if (instantiatedCar != null) {
+			GameObject.Destroy (instantiatedCar.gameObject);
+		}
 		
 		Screen.showCursor = true;
 	}

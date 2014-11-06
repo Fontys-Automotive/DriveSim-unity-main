@@ -77,12 +77,20 @@ public class AICarScript : MonoBehaviour
 		}
 			
 		if (Input.GetKeyDown (KeyCode.Z)) {
+			if(driving == false){
 			driving = true;
 			routePlanningMode = false;
 			if (currentRoute == null || currentRoute.Count == 0) {
 				int routeLength = Random.Range (20, 40);
 				currentRoute = PlotRandomRoute (routeLength);
 			}
+			}
+			else
+			{
+				driving = false;
+				this.transform.position = startingPos;
+			}
+
 		}
 
 		if (driving) {
