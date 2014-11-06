@@ -583,7 +583,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -609,7 +609,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -635,7 +635,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -687,7 +687,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -713,7 +713,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -739,7 +739,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -791,7 +791,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -809,6 +809,32 @@
     </SavedObject>
     <SavedObject>
       <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>73</gridid>
+      <gridx>10</gridx>
+      <gridy>3</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>270.000061</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
         <name>bibeko-50-recht</name>
       </names>
       <gridid>76</gridid>
@@ -817,7 +843,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -843,7 +869,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -887,6 +913,84 @@
     </SavedObject>
     <SavedObject>
       <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>85</gridid>
+      <gridx>1</gridx>
+      <gridy>4</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>8.392334E-05</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
+        <name>Roundabout</name>
+      </names>
+      <gridid>87</gridid>
+      <gridx>3</gridx>
+      <gridy>4</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>0.000175476074</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>false</lightposts>
+      <trafficlight>false</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>88</gridid>
+      <gridx>4</gridx>
+      <gridy>4</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>180.000031</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
         <name>bibeko-50-recht</name>
       </names>
       <gridid>90</gridid>
@@ -908,6 +1012,32 @@
       <curb>false</curb>
       <lightposts>true</lightposts>
       <trafficlight>false</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>92</gridid>
+      <gridx>8</gridx>
+      <gridy>4</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>180.000031</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
       <maxspeed>50</maxspeed>
       <rules>NO_SIGN</rules>
     </SavedObject>
@@ -947,7 +1077,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -991,6 +1121,58 @@
     </SavedObject>
     <SavedObject>
       <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>106</gridid>
+      <gridx>1</gridx>
+      <gridy>5</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>180.000076</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>109</gridid>
+      <gridx>4</gridx>
+      <gridy>5</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>3.81469727E-05</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
         <name>bibeko-50-recht</name>
       </names>
       <gridid>111</gridid>
@@ -1012,6 +1194,58 @@
       <curb>false</curb>
       <lightposts>true</lightposts>
       <trafficlight>false</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
+        <name>Roundabout2</name>
+      </names>
+      <gridid>115</gridid>
+      <gridx>10</gridx>
+      <gridy>5</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>270.000122</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>false</lightposts>
+      <trafficlight>false</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>116</gridid>
+      <gridx>11</gridx>
+      <gridy>5</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>3.81469727E-05</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
       <maxspeed>50</maxspeed>
       <rules>NO_SIGN</rules>
     </SavedObject>
@@ -1051,7 +1285,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -1121,6 +1355,32 @@
     </SavedObject>
     <SavedObject>
       <names>
+        <name>bibeko-50-T-stuk</name>
+      </names>
+      <gridid>135</gridid>
+      <gridx>9</gridx>
+      <gridy>6</gridy>
+      <degrees>
+        <Vector3>
+          <x>0</x>
+          <y>270.000061</y>
+          <z>0</z>
+        </Vector3>
+      </degrees>
+      <isroad>
+        <boolean>true</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+        <boolean>false</boolean>
+      </isroad>
+      <curb>false</curb>
+      <lightposts>true</lightposts>
+      <trafficlight>true</trafficlight>
+      <maxspeed>50</maxspeed>
+      <rules>NO_SIGN</rules>
+    </SavedObject>
+    <SavedObject>
+      <names>
         <name>bibeko-50-recht</name>
       </names>
       <gridid>139</gridid>
@@ -1155,7 +1415,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -1259,7 +1519,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -1285,7 +1545,7 @@
       <degrees>
         <Vector3>
           <x>270</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -1441,7 +1701,7 @@
       <degrees>
         <Vector3>
           <x>0</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>
@@ -1623,7 +1883,7 @@
       <degrees>
         <Vector3>
           <x>0</x>
-          <y>180.000015</y>
+          <y>180.000031</y>
           <z>0</z>
         </Vector3>
       </degrees>

@@ -20,8 +20,8 @@ private  float updateInterval = 0.3F;
 private float accum   = 0; // FPS accumulated over the interval
 private int   frames  = 0; // Frames drawn over the interval
 private float timeleft; // Left time for current interval
- 
-	void Start()
+	public float fps = 0.4f ;
+		void Start()
 	{
 	    if( !guiText )
 	    {
@@ -40,31 +40,52 @@ private float timeleft; // Left time for current interval
 	    ++frames;
 	 
 	    // Interval ended - update GUI text and start new interval
-	    if( timeleft <= 0.0 )
-	    {
-	        // display two fractional digits (f2 format)
-		float fps = accum/frames;
-		string format = System.String.Format("{0:F2} FPS",fps);
-			if (Input.GetKey(KeyCode.F1)) {
-				guiText.text = format;
-			}else{
-				guiText.text = "";
-			}	
-		//guiText.text = format;
-	 
-		if(fps < 30 && fps > 10){
-			guiText.material.color = Color.yellow;
+		if( timeleft <= 0.0 )
+		{
+			// display two fractional digits (f2 format)
+			
+			fps = accum/frames;
+			
+			GUIStyle style = new GUIStyle();
+			int w = UnityEngine.Screen.width, h = UnityEngine.Screen.height;
+			Rect rect = new Rect(0, 0, w, h * 2 / 100);
+			float msec =  1000.0f;
+			string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
+			GUI.Label(rect, text, style);
+			
+			string format = System.String.Format("{0:F2} FPS",fps);
+			
+			guiText.text = format;
+			
+			if(fps < 30 && fps > 10){
+				guiText.material.color = Color.yellow;
+			}
+			if(fps < 10){
+				guiText.material.color = Color.red;
+			}
+			if(fps > 30){
+				guiText.material.color = Color.green;
+			}
+			//	DebugConsole.Log(format,level);
+			timeleft = updateInterval;
+			accum = 0.0F;
+			frames = 0;
+			//////
 		}
-		if(fps < 10){
-			guiText.material.color = Color.red;
-		}
-		if(fps > 30){
-			guiText.material.color = Color.green;
-		}
-		//	DebugConsole.Log(format,level);
-	        timeleft = updateInterval;
-	        accum = 0.0F;
-	        frames = 0;
-	    }
 	}
+	
+	public  float GetFrames()
+	{
+		
+		timeleft -= Time.deltaTime;
+		accum += Time.timeScale/Time.deltaTime;
+		++frames;
+		fps = accum/frames;
+		return fps;
+	}
+	
+	
+	
+	
+	
 }

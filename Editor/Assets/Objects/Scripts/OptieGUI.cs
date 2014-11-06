@@ -296,7 +296,8 @@ public class OptieGUI : MonoBehaviour
 		//What to do if the road is selected
 		if (objectSelected == "object" && GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().multiSelectionActive == false) {
 			if (selectedGameobject != null && selectedGameobject.layer == 8) {
-				GUI.Label (new Rect (Screen.width - guiWidth, 0, guiWidth, guiHeight), bgTex, style);
+				GUI.Label (new Rect (Screen.width - guiWidth, 0 , guiWidth, guiHeight), bgTex, style);
+
 
 				//hassidewalk
 				//bool[] bools = selectedGameobject.GetComponent<Road> ().HasSidewalks ();
