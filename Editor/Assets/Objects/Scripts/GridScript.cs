@@ -372,7 +372,7 @@ public class GridScript : MonoBehaviour
 
 	public  void OnGUI()
 	{
-				int w = Screen.width, h = Screen.height;
+				int w = UnityEngine.Screen.width, h = UnityEngine.Screen.height;
 				FPSGUI s = new FPSGUI ();
 				GUIStyle style = new GUIStyle ();
 		

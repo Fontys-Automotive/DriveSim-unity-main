@@ -1,9 +1,12 @@
-<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Objects\Scripts\GridScript.cs">
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\JavaScripts\Car.js">
     <Files>
-      <File FileName="Assets\Objects\Scripts\DrawRoad.cs" Line="13" Column="25" />
-      <File FileName="Assets\Objects\Scripts\GridScript.cs" Line="251" Column="8" />
+      <File FileName="Assets\Standard Assets\JavaScripts\Car.js" Line="341" Column="5" />
+      <File FileName="Assets\Objects\Scripts\GridScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\DrawRoad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Scripts\OptieGUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Objects\Car\Scripts\CSharpScripts\CarCamera.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
