@@ -34,7 +34,7 @@ public class MultiSelect : MonoBehaviour
 				RaycastHit hit;
 				int mask = (1 << 10);		
 				//Check the object you hit...
-				
+
 				//Layer 10 is gridcell.
 				if (Physics.Raycast (ray, out hit, Mathf.Infinity, mask)) {	
 					selectedObject1 = hit.transform.gameObject;
@@ -193,6 +193,7 @@ public class MultiSelect : MonoBehaviour
 
 			switch (locationindex) {
 			case 0:
+
 				for (int y = pos1.GetComponent<GridCell>().getY(); y <= pos1.GetComponent<GridCell>().getY() + ysize; y++) {
 					for (int x = pos1.GetComponent<GridCell>().getX(); x <= pos1.GetComponent<GridCell>().getX() + xsize; x++) {
 						gridcellselection.Add (gridcells [y, x]);
@@ -223,10 +224,15 @@ public class MultiSelect : MonoBehaviour
 			}
 
 			foreach (GameObject cell in gridcellselection) {
-				selectCube = GameObject.Instantiate (selectionCube) as GameObject;
-				selectCube.transform.position = cell.transform.position;
-				selectcubes.Add (selectCube);
-				multiselection.Add (cell);
+
+					selectCube = GameObject.Instantiate (selectionCube) as GameObject;
+					selectCube.transform.position = cell.transform.position;
+					selectcubes.Add (selectCube);
+					multiselection.Add (cell);
+					
+
+
+
 			}
 		}
 	}

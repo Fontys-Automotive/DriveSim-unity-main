@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Road : MonoBehaviour
@@ -33,6 +33,10 @@ public class Road : MonoBehaviour
 		TURN,
 		INTERSECTION,
 		T_SECTION,
+		ROUNDABOUT,
+		ROUNDABOUT2,
+		GolqmZavoi,
+
 	}
 	//public boolean hasTrafficLight = false;
 	private float maxDistCheck = 5.5f;
@@ -48,6 +52,7 @@ public class Road : MonoBehaviour
 	public RoadType roadType;
 	private ArrayList carsOnIntersection;
 	public ArrayList problemCars;
+
 
 	// Use this for initialization
 	void Start ()

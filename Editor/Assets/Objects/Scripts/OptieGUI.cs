@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Text.RegularExpressions;
@@ -300,6 +300,7 @@ public class OptieGUI : MonoBehaviour
 		//What to do if the road is selected
 		if (objectSelected == "object" && GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<MultiSelect> ().multiSelectionActive == false) {
 			if (selectedGameobject != null && selectedGameobject.layer == 8) {
+				GUI.Label (new Rect (Screen.width - guiWidth, 0 , guiWidth, guiHeight), bgTex, style);
 
 			if (Input.GetKeyDown (KeyCode.Mouse1)) {
 					this.enabled = true;

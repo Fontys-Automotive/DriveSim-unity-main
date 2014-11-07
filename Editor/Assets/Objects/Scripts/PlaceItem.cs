@@ -19,7 +19,7 @@ public class PlaceItem : Object {
 		bibeko50.Add(Resources.Load ("PlacedObjects/bibeko-50-bocht-klein") as GameObject);
 		bibeko50.Add(Resources.Load ("PlacedObjects/bibeko-50-T-stuk") as GameObject);
 		bibeko50.Add(Resources.Load ("PlacedObjects/bibeko-50-kruispunt") as GameObject);
-
+		bibeko50.Add (Resources.Load ("lacedObjects/krygovomdf") as GameObject);
 		//Add the arraylists with one type of road to allRoads
 		allRoads.Add (bibeko50);
 

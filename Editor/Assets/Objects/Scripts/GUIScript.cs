@@ -391,7 +391,7 @@ public class GUIScript : MonoBehaviour {
 			GridScript gridScript = GameObject.FindWithTag ("MainCamera").GetComponent<GridScript> ();
 			gridScript.setSelectedObject(texture.name);
 			if(texture.name != "0none"){
-				if(gridScript.objectToPlace.layer == 8){
+				if(gridScript.objectToPlace.layer == 9){
 					GameObject.FindGameObjectWithTag("MainScripts").GetComponent<OptieGUI>().setSelected ("object");
 					GameObject.FindGameObjectWithTag("MainScripts").GetComponent<OptieGUI>().setSelectedGameObject (gridScript.objectToPlace);
 				}
