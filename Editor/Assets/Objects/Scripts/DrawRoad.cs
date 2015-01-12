@@ -20,7 +20,10 @@ public class DrawRoad : Object {
 		STRAIGHT,
 		CORNER,
 		T_JUNCTION,
-		INTERSECTION
+		INTERSECTION,
+		ROUNDABOUT,
+		ROUNDABOUT2,
+
 	};
 
 	public GameObject GetRoadPiece(GridCell currentGridcell, GridCell previousGridcell, ArrayList roadPieces) {

@@ -11,6 +11,7 @@ public class Road : MonoBehaviour
 		MAX_80_c,
 		NO_ENTRY_2WAY_c,
 		NO_ENTRY_1WAY_c,
+		ROUNDABOUT_c,
 		
 		PRIORITY_CROSSING_t,
 		PRIORITY_LEFT_t,
@@ -33,6 +34,10 @@ public class Road : MonoBehaviour
 		TURN,
 		INTERSECTION,
 		T_SECTION,
+		ROUNDABOUT,
+		ROUNDABOUT2,
+		GolqmZavoi,
+
 	}
 	//public boolean hasTrafficLight = false;
 	private float maxDistCheck = 5.5f;
@@ -48,6 +53,7 @@ public class Road : MonoBehaviour
 	public RoadType roadType;
 	private ArrayList carsOnIntersection;
 	public ArrayList problemCars;
+
 
 	// Use this for initialization
 	void Start ()
@@ -79,7 +85,7 @@ public class Road : MonoBehaviour
 			this.SetSign (rules);
 		}
 	}
-	
+
 	public Rule GetRules ()
 	{
 		return this.ruleset;
