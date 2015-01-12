@@ -1,0 +1,117 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+-r:Assets/Plugins/alljoyn_unity.dll
+-r:Assets/Plugins/System.Windows.Forms.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_4_5_4
+-define:UNITY_4_5
+-define:UNITY_STANDALONE_WIN
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_NEW_HIERARCHY 
+-define:ENABLE_AUDIO_FMOD
+-define:UNITY_STANDALONE
+-define:ENABLE_MONO
+-define:ENABLE_TERRAIN
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_MOVIES
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:INCLUDE_WP_BLUE_SUPPORT
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_WIN
+"Assets/Objects/Car/Pro Standard Assets/Image Based/BlurEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/ColorCorrectionEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/ColorCorrectionEffectPCMac_26.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/Contrast Stretch/ContrastStretchEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/EdgeDetectEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/GlowEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/GlowEffectThreshold_26.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/GrayscaleEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/ImageEffectBase.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/ImageEffects.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/MotionBlur.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/MotionBlurEdge.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/NoiseEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/SSAOEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/SepiaToneEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/TwirlEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Image Based/VortexEffect.cs"
+"Assets/Objects/Car/Pro Standard Assets/Water/Sources/Water.cs"
+Assets/Objects/Car/Scripts/CSharpScripts/BirdsBehaviour.cs
+Assets/Objects/Car/Scripts/CSharpScripts/BlobShadowController.cs
+Assets/Objects/Car/Scripts/CSharpScripts/CarCamera.cs
+Assets/Objects/Car/Scripts/CSharpScripts/CombineChildren.cs
+Assets/Objects/Car/Scripts/CSharpScripts/DisableObjects.cs
+Assets/Objects/Car/Scripts/CSharpScripts/EffectController.cs
+Assets/Objects/Car/Scripts/CSharpScripts/Generate2DReflection.cs
+Assets/Objects/Car/Scripts/CSharpScripts/MeshCombineUtility.cs
+Assets/Objects/Car/Scripts/CSharpScripts/MirrorReflection.cs
+Assets/Objects/Car/Scripts/CSharpScripts/ToggleObjectTrigger.cs
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/AerodynamicResistance.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/AntiRollBar.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/CarController.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/Drivetrain.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/Skidmarks.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/SoundController.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/TractionHelper.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/Wheel.cs"
+"Assets/Objects/Car/~AlternatePhysicsModel/Scripts/Wing.cs"
+Assets/Objects/Scripts/AICarScript.cs
+Assets/Objects/Scripts/AreaFile.cs
+Assets/Objects/Scripts/Billboard.cs
+Assets/Objects/Scripts/BluetoothConnect.cs
+Assets/Objects/Scripts/CalculateLatLon.cs
+Assets/Objects/Scripts/CameraScript.cs
+Assets/Objects/Scripts/Categories.cs
+Assets/Objects/Scripts/Category.cs
+Assets/Objects/Scripts/ComboBox.cs
+Assets/Objects/Scripts/DrawRoad.cs
+Assets/Objects/Scripts/FPSGUI.cs
+Assets/Objects/Scripts/GUIScript.cs
+Assets/Objects/Scripts/GridCell.cs
+Assets/Objects/Scripts/GridScript.cs
+Assets/Objects/Scripts/GridXmlSerializer.cs
+Assets/Objects/Scripts/HelpGUIScript.cs
+Assets/Objects/Scripts/LoadAreaFile.cs
+Assets/Objects/Scripts/LoadSaveBox.cs
+Assets/Objects/Scripts/MultiSelect.cs
+Assets/Objects/Scripts/ObjectList.cs
+Assets/Objects/Scripts/OptieGUI.cs
+Assets/Objects/Scripts/PlaceItem.cs
+Assets/Objects/Scripts/PlacedObject.cs
+Assets/Objects/Scripts/Popup.cs
+Assets/Objects/Scripts/Road.cs
+Assets/Objects/Scripts/SaveFilePanel.cs
+Assets/Objects/Scripts/SavedObject.cs
+Assets/Objects/Scripts/SceneryScript.cs
+Assets/Objects/Scripts/SelectObject.cs
+Assets/Objects/Scripts/SimulationScript.cs
+Assets/Objects/Scripts/StartingPoint.cs
+Assets/Objects/Scripts/TestXml.cs
+Assets/Objects/Scripts/TrafficLight.cs
+Assets/Objects/Scripts/WorldScript.cs
+Assets/Scripts/AllJoynAgent.cs
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/2.0\System.Runtime.Serialization.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/2.0\System.Xml.Linq.dll"
