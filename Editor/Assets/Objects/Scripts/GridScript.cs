@@ -254,7 +254,7 @@ public class GridScript : MonoBehaviour
 	
 	public void setSelectedObject (string name)
 	{
-//	print (name);
+		//Debug.Log("You selected the object "+ name);
 		objectToPlace = Resources.Load ("PlacedObjects/" + name) as GameObject;
 
 		//Place it outside of the screen
@@ -418,84 +418,80 @@ public class GridScript : MonoBehaviour
 	/// <param name="objToPlace">Object to place.</param>
 	private void checkTypeObject(GridCell selectedCell, GameObject objToPlace)
 	{
+		//the object we want to place is a road object
 		if((objToPlace.GetComponent("Road") as Road) != null)
 		{
 			switch (objToPlace.GetComponent<Road>().roadType) 
 			{
 			case Road.RoadType.ROUNDABOUT:
-			//This roundabout takes 4 cells. 
-			//One cell to the left, onr to the top, and one top left.
-			if(placeItem.PlaceObject(selectedCell, objToPlace))
-			{
-				//the object is successfully placed. Make the cells next to it unavailable for placing
-					if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null)
+				//This roundabout takes 4 cells. 
+				//One cell to the left, onr to the top, and one top left.
+				if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null &&
+				   getCell(selectedCell.getX(), (selectedCell.getY() + 1)) != null &&
+				   getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)) != null)
+				{
+					if(!getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied &&
+					   !getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied &&
+					   !getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied)
 					{
-						getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() + 1)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied = true;			//top		
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied = true;	//topleft
+						if(placeItem.PlaceObject(selectedCell, objToPlace))
+						{
+							getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
+							getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied = true;			//top	
+							getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied = true;	//topleft
+						}
 					}
 				}
 				break;
 			case Road.RoadType.ROUNDABOUT2:
-				if(placeItem.PlaceObject(selectedCell, objToPlace))
+				if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null &&
+				   getCell(selectedCell.getX(), (selectedCell.getY() - 1)) != null &&
+				   getCell((selectedCell.getX() - 1), (selectedCell.getY() - 1)) != null)
 				{
-					//the object is successfully placed. Make the cells next to it unavailable for placing
-					if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null)
+					if(!getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied &&
+					   !getCell(selectedCell.getX(), (selectedCell.getY() - 1)).isOccupied &&
+					   !getCell((selectedCell.getX() - 1), (selectedCell.getY() - 1)).isOccupied)
 					{
-						getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() - 1)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() - 1)).isOccupied = true;			//bot		
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() - 1)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() - 1)).isOccupied = true;	//botleft
+						if(placeItem.PlaceObject(selectedCell, objToPlace))
+						{
+							getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
+							getCell(selectedCell.getX(), (selectedCell.getY() - 1)).isOccupied = true;			//bot	
+							getCell((selectedCell.getX() - 1), (selectedCell.getY() - 1)).isOccupied = true;	//botleft
+						}
 					}
 				}
 				break;
 			case Road.RoadType.BIGROUNDABOUT:
-				//this roundabout takes 6 cells. god damn so big!!
-				if(placeItem.PlaceObject(selectedCell, objToPlace))
+				//this roundabout takes 9 cells. god damn so big!!
+				if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null &&
+				   getCell((selectedCell.getX() - 2), selectedCell.getY()) != null &&
+				   getCell(selectedCell.getX(), (selectedCell.getY() + 1)) != null &&
+				   getCell(selectedCell.getX(), (selectedCell.getY() + 2)) != null &&
+				   getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)) != null &&
+				   getCell((selectedCell.getX() - 1), (selectedCell.getY() + 2)) != null &&
+				   getCell((selectedCell.getX() - 2), (selectedCell.getY() + 1)) != null &&
+				   getCell((selectedCell.getX() - 2), (selectedCell.getY() + 2)) != null)
 				{
-					//the object is successfully placed. Make the cells next to it unavailable for placing
-					if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null)
+					if(!getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied &&
+					   !getCell((selectedCell.getX() - 2), selectedCell.getY()).isOccupied &&
+					   !getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied &&
+					   !getCell(selectedCell.getX(), (selectedCell.getY() + 2)).isOccupied &&
+					   !getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied &&
+					   !getCell((selectedCell.getX() - 1), (selectedCell.getY() + 2)).isOccupied &&
+					   !getCell((selectedCell.getX() - 2), (selectedCell.getY() + 1)).isOccupied &&
+					   !getCell((selectedCell.getX() - 2), (selectedCell.getY() + 2)).isOccupied)
 					{
-						getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
-					}
-					if(getCell((selectedCell.getX() - 2), selectedCell.getY()) != null)
-					{
-						getCell((selectedCell.getX() - 2), selectedCell.getY()).isOccupied = true;			//leftleft
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() + 1)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied = true;			//top		
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() + 2)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() + 2)).isOccupied = true;			//toptop		
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied = true;	//middle
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() + 2)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() + 2)).isOccupied = true;	//lefttoptop
-					}
-					if(getCell((selectedCell.getX() - 2), (selectedCell.getY() + 1)) != null)
-					{
-						getCell((selectedCell.getX() - 2), (selectedCell.getY() + 1)).isOccupied = true;	//leftlefttop
-					}
-					if(getCell((selectedCell.getX() - 2), (selectedCell.getY() + 2)) != null)
-					{
-						getCell((selectedCell.getX() - 2), (selectedCell.getY() + 2)).isOccupied = true;	//leftlefttoptop
+						if(placeItem.PlaceObject(selectedCell, objToPlace))
+						{
+							getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
+							getCell((selectedCell.getX() - 2), selectedCell.getY()).isOccupied = true;			//leftleft
+							getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied = true;			//top		
+							getCell(selectedCell.getX(), (selectedCell.getY() + 2)).isOccupied = true;			//toptop		
+							getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied = true;	//middle
+							getCell((selectedCell.getX() - 1), (selectedCell.getY() + 2)).isOccupied = true;	//lefttoptop
+							getCell((selectedCell.getX() - 2), (selectedCell.getY() + 1)).isOccupied = true;	//leftlefttop
+							getCell((selectedCell.getX() - 2), (selectedCell.getY() + 2)).isOccupied = true;	//leftlefttoptop
+						}
 					}
 				}
 				break;
@@ -506,5 +502,9 @@ public class GridScript : MonoBehaviour
 		}
 	}
 
+	private bool checkBeforePlacingObject()
+	{
+		return false;
+	}
 }
 
