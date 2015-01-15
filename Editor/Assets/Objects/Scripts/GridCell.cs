@@ -11,7 +11,16 @@ public class GridCell : MonoBehaviour
 	private GameObject ghost = null;
 	private bool ghosting = false;
 	private GameObject copiedGhost = null;
-	
+
+	//if Occupied is true, the gridcell has something on it
+	private bool Occupied = false;
+
+	public bool isOccupied
+	{
+		get	{	return Occupied;	}	
+		set {	Occupied = value;	}
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -193,7 +202,7 @@ public class GridCell : MonoBehaviour
 	public bool addOccupant (GameObject occ)
 	{
 		float tempspeed = 0;
-		if (isAllowed (occ)) {
+		if (isAllowed (occ) && !isOccupied) {
 			if (occupants == null) {
 				occupants = new ArrayList ();	
 			}
@@ -223,10 +232,12 @@ public class GridCell : MonoBehaviour
 			//copiedObject.transform.parent = worldParent;
 
 			if (copiedObject.tag == "startpoint") {
+				isOccupied = true;
 				return true;
 			}
 			occupants.Add (copiedObject);
 			//Debug.Log("occupant loaded");
+			isOccupied = true;
 			return true;
 		}
 		return false;
