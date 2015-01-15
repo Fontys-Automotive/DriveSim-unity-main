@@ -681,19 +681,36 @@ public class OptieGUI : MonoBehaviour
 
         btnSaveSigns.Text = "Save";
         btnSaveSigns.Click += new EventHandler(btnSaveSigns_Click);
-        inputBox.Controls.Add(btnSaveSigns);
+        inputSignBox.Controls.Add(btnSaveSigns);
         btnSaveSigns.Top += 150;
-        inputBox.Show();
 
         inputSignBox.Show();
     }
 
     private void btnSaveSigns_Click(object sender, EventArgs e)
     {
+        string name = "NO_SIGN";
+        Road.Rule chosen;
         //TODO uitzoeken welke sign er gekozen is en deze zetten in de road.rule
+        foreach (RadioButton r in inputSignBox.Controls)
+        {
+            if (r.Checked)
+            {
+                name = r.Name;
+            }
+        }
 
+        foreach(Road.Rule rule in Enum.GetValues(typeof(Road.Rule)))
+        {
+            if (rule.Equals(name))
+            {
+                chosen = rule;
+                selectedGameobject.GetComponent<Road>().SetRules(chosen, true);
+            }
+        }
         SaveRoadSettings();
         inputSignBox.Close();
+        MessageBox.Show(selectedGameobject.GetComponent<Road>().GetRules().ToString());
     }
     private void btnApply_Click(object sender, System.EventArgs e)
     {
