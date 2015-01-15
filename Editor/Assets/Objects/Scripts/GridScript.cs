@@ -15,6 +15,7 @@ public class GridScript : MonoBehaviour
 	private GameObject mouseSelectedObject = null;
 	private float deltaTime = 0.0f;
 
+	private GameObject quad;
 
 	private bool shiftdown = false;
 	private bool deldown = false;
@@ -236,13 +237,13 @@ public class GridScript : MonoBehaviour
 	public void DrawSelectionQuad (Vector3 position, int id, int x, int y)
 	{
 		//Get the quad from the prefabs
-		GameObject quad = GameObject.Instantiate (selectionQuad) as GameObject;
+		quad = GameObject.Instantiate (selectionQuad) as GameObject;
 		
 		//GameObject quad = new GameObject();
 		//quad.tag = "gridquad";
 		//Now set it to the proper grid size...
 		quad.transform.localScale = new Vector3 (gridCellSize, gridCellSize, gridCellSize);
-		
+
 		//Next place the quad at the first quad cell, with a little deviation
 		float deviation = quad.renderer.bounds.size.x / 2;
 		quad.transform.position = new Vector3 (position.x + deviation, position.y, position.z + deviation);
@@ -251,10 +252,9 @@ public class GridScript : MonoBehaviour
 		quad.GetComponent<GridCell> ().setId (id, x, y);
 		cells [y, x] = quad;
 	}
-	
+
 	public void setSelectedObject (string name)
 	{
-		//Debug.Log("You selected the object "+ name);
 		objectToPlace = Resources.Load ("PlacedObjects/" + name) as GameObject;
 
 		//Place it outside of the screen
@@ -319,6 +319,7 @@ public class GridScript : MonoBehaviour
 							if (hit.transform.gameObject.tag == "grid") {
 
 								GridCell cellScript = hit.transform.gameObject.GetComponent<GridCell> ();
+								openCells(cellScript);
 								this.RemoveObject (cellScript);
 							}
 						}
@@ -351,14 +352,11 @@ public class GridScript : MonoBehaviour
 				id++;
 			}
 		}
-
-		
 		GameObject.Find ("world_plane").GetComponent<WorldScript> ().resizePlane ();
 	}
 	
 	private void ClearGrid ()
 	{
-		
 		GameObject[] grids = GameObject.FindGameObjectsWithTag ("grid");
 		foreach (GameObject cell in grids) {
 			
@@ -410,7 +408,7 @@ public class GridScript : MonoBehaviour
 		return g.GetComponent<GridCell>();
 	}
 
-	//Added by Eddy
+	//Added by FontysTeam2015
 	/// <summary>
 	/// Checks which type of object is being placed on the grid and gives it some condition.
 	/// </summary>
@@ -425,7 +423,7 @@ public class GridScript : MonoBehaviour
 			{
 			case Road.RoadType.ROUNDABOUT:
 				//This roundabout takes 4 cells. 
-				//One cell to the left, onr to the top, and one top left.
+				//One cell to the left, one to the top, and one top left.
 				if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null &&
 				   getCell(selectedCell.getX(), (selectedCell.getY() + 1)) != null &&
 				   getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)) != null)
@@ -502,9 +500,43 @@ public class GridScript : MonoBehaviour
 		}
 	}
 
-	private bool checkBeforePlacingObject()
+	private void openCells(GridCell celltoOpen)
 	{
-		return false;
+		//check first if the cells arraylist is not instantiated
+		if(celltoOpen.getOccupants() != null)
+		{
+			foreach (GameObject objToDelete in celltoOpen.getOccupants()) 
+			{
+				switch (objToDelete.GetComponent<Road>().roadType) 
+				{
+					case Road.RoadType.ROUNDABOUT:
+						//This roundabout takes 4 cells. 
+						//One cell to the left, one to the top, and one top left.
+						getCell((celltoOpen.getX() - 1), celltoOpen.getY()).isOccupied = false;			//left
+						getCell(celltoOpen.getX(), (celltoOpen.getY() + 1)).isOccupied = false;			//top	
+						getCell((celltoOpen.getX() - 1), (celltoOpen.getY() + 1)).isOccupied = false;	//topleft
+					break;
+					case Road.RoadType.ROUNDABOUT2:
+						getCell((celltoOpen.getX() - 1), celltoOpen.getY()).isOccupied = true;			//left
+						getCell(celltoOpen.getX(), (celltoOpen.getY() - 1)).isOccupied = true;			//bot	
+						getCell((celltoOpen.getX() - 1), (celltoOpen.getY() - 1)).isOccupied = true;	//botleft
+					break;
+					case Road.RoadType.BIGROUNDABOUT:
+						//this roundabout takes 9 cells. god damn so big!!
+						getCell((celltoOpen.getX() - 1), celltoOpen.getY()).isOccupied = false;			//left
+						getCell((celltoOpen.getX() - 2), celltoOpen.getY()).isOccupied = false;			//leftleft
+						getCell(celltoOpen.getX(), (celltoOpen.getY() + 1)).isOccupied = false;			//top		
+						getCell(celltoOpen.getX(), (celltoOpen.getY() + 2)).isOccupied = false;			//toptop		
+						getCell((celltoOpen.getX() - 1), (celltoOpen.getY() + 1)).isOccupied = false;	//middle
+						getCell((celltoOpen.getX() - 1), (celltoOpen.getY() + 2)).isOccupied = false;	//lefttoptop
+						getCell((celltoOpen.getX() - 2), (celltoOpen.getY() + 1)).isOccupied = false;	//leftlefttop
+						getCell((celltoOpen.getX() - 2), (celltoOpen.getY() + 2)).isOccupied = false;	//leftlefttoptop
+					break;
+					default:
+					break;
+				}
+			}
+		}
 	}
 }
 

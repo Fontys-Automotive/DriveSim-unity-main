@@ -308,6 +308,7 @@ public class GridCell : MonoBehaviour
 			occupants.Clear ();
 			//Debug.Log("create a new list");
 			occupants = new ArrayList ();
+			this.isOccupied = false;
 			return true;
 		}
 		return false;
@@ -339,7 +340,4 @@ public class GridCell : MonoBehaviour
 	{
 		return y;
 	}
-	
-	
-
 }
