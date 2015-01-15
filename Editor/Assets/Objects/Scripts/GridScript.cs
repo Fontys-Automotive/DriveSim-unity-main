@@ -536,6 +536,7 @@ public class GridScript : MonoBehaviour
 					break;
 				}
 			}
+			celltoOpen.isOccupied = false;
 		}
 	}
 }

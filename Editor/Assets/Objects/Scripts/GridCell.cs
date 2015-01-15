@@ -300,7 +300,7 @@ public class GridCell : MonoBehaviour
 	public bool removeOccupants ()
 	{
 		if (occupants != null) {
-			//Debug.Log("occuapnts is not null" + occupants.Count);
+			Debug.Log("cell is occupied? " + this.isOccupied);
 			foreach (GameObject obj in occupants) {
 				GameObject.DestroyImmediate (obj);
 			}
