@@ -7,8 +7,9 @@ using UnityEditor;
 
 public class OptieGUI : MonoBehaviour
 {
-    Form inputBox = new Form();
-    Form inputSignBox = new Form();
+    //Form inputBox = new Form();
+    //Form inputSignBox = new Form();
+    
     private GUIStyle style;
     private Texture2D bgTex;
     private GUIStyle styleButton;
@@ -47,6 +48,8 @@ public class OptieGUI : MonoBehaviour
     float y = 1;
 
     System.Windows.Forms.ContextMenuStrip menu = new System.Windows.Forms.ContextMenuStrip();
+    ToolStripMenuItem item, submenuMaxspeed;
+    ToolStripMenuItem signItem, submenuSigns;
     TextBox tbxMaxSpeed = new TextBox();
     CheckBox cbSidewalk = new CheckBox();
     CheckBox cbLightpost = new CheckBox();
@@ -65,6 +68,8 @@ public class OptieGUI : MonoBehaviour
     RadioButton ADVICESPEED_80 = new RadioButton();
     RadioButton PRIORITY_START = new RadioButton();
     RadioButton PRIORITY_END = new RadioButton();
+    string wegRegel;
+    int maxiSpeed;
 
     Car carScript = null;
     Boolean keyboardon = true;
@@ -99,6 +104,22 @@ public class OptieGUI : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
+        NO_SIGN.Name = "NO_SIGN";
+        MAXSPEED_30.Name = "MAXSPEED_30";
+        MAXSPEED_50.Name = "MAXSPEED_50";
+        MAXSPEED_80.Name = "MAXSPEED_80";
+        NO_ENTRY_2_WAY.Name = "NO_ENTRY_2_WAY";
+        NO_ENTRY_1_WAY.Name = "NO_ENTRY_1_WAY";
+        PRIORITY_LEFT.Name = "PRIORITY_LEFT";
+        PRIORITY_RIGHT.Name = "PRIORITY_RIGHT";
+        STOP.Name = "STOP";
+        ADVICESPEED_30.Name = "ADVICESPEED_30";
+        ADVICESPEED_50.Name = "ADVICESPEED_50";
+        ADVICESPEED_80.Name = "ADVICESPEED_80";
+        PRIORITY_START.Name = "PRIORITY_START";
+        PRIORITY_END.Name = "PRIORITY_END";
+
 
         dropdownStyle = new GUIStyle();
         dropdownStyle.normal.textColor = Color.white;
@@ -353,6 +374,7 @@ public class OptieGUI : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
+                    MessageBox.Show(selectedGameobject.GetComponent<Road>().maxSpeed.ToString());
                     menu.Close();
                     menu.Items.Clear();
 
@@ -368,15 +390,15 @@ public class OptieGUI : MonoBehaviour
                     cbTrafficlight.Checked = selectedGameobject.GetComponent<Road>().hasTrafficLights;
                     ToolStripControlHost Ch3 = new ToolStripControlHost(cbTrafficlight);
 
-                    Button btnMaxSpeed = new Button();
-                    btnMaxSpeed.Text = "Set max speed";
-                    btnMaxSpeed.Click += new EventHandler(btnMaxSpeed_Click);
-                    ToolStripControlHost Ch4 = new ToolStripControlHost(btnMaxSpeed);
+                    //Button btnMaxSpeed = new Button();
+                    //btnMaxSpeed.Text = "Set max speed";
+                    //btnMaxSpeed.Click += new EventHandler(btnMaxSpeed_Click);
+                    //ToolStripControlHost Ch4 = new ToolStripControlHost(btnMaxSpeed);
 
-                    Button btnTrafficsigns = new Button();
-                    btnTrafficsigns.Text = "Set traffic signs";
-                    btnTrafficsigns.Click += new EventHandler(btnTrafficsigns_Click);
-                    ToolStripControlHost Ch5 = new ToolStripControlHost(btnTrafficsigns);
+                    //Button btnTrafficsigns = new Button();
+                    //btnTrafficsigns.Text = "Set traffic signs";
+                    //btnTrafficsigns.Click += new EventHandler(btnTrafficsigns_Click);
+                    //ToolStripControlHost Ch5 = new ToolStripControlHost(btnTrafficsigns);
 
                     Button btnApply = new Button();
                     btnApply.Text = "Apply";
@@ -386,8 +408,93 @@ public class OptieGUI : MonoBehaviour
                     menu.Items.Add(Ch1);
                     menu.Items.Add(Ch2);
                     menu.Items.Add(Ch3);
-                    menu.Items.Add(Ch4);
-                    menu.Items.Add(Ch5);
+                    //menu.Items.Add(Ch4);
+
+                    submenuMaxspeed = new ToolStripMenuItem();
+                    submenuMaxspeed.Text = "Max speed";
+                    item = new ToolStripMenuItem();
+                    item.Text = "30";
+                    item.Click += new EventHandler(item_Click);
+                    submenuMaxspeed.DropDownItems.Add(item);
+                    item = new ToolStripMenuItem();
+                    item.Text = "50";
+                    item.Click += new EventHandler(item_Click);
+                    submenuMaxspeed.DropDownItems.Add(item);
+                    item = new ToolStripMenuItem();
+                    item.Text = "80";
+                    item.Click += new EventHandler(item_Click);
+                    submenuMaxspeed.DropDownItems.Add(item);
+                    item = new ToolStripMenuItem();
+                    item.Text = "120";
+                    item.Click += new EventHandler(item_Click);
+                    submenuMaxspeed.DropDownItems.Add(item);
+                    menu.Items.Add(submenuMaxspeed);
+
+                   
+
+                    submenuSigns = new ToolStripMenuItem();
+                    submenuSigns.Text = "Traffic signs";
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "No sign";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Max speed 30";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Max speed 50";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Max speed 80";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "No entry two way";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "No entry one way";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Priority left";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Priority right";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Stop";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Advice speed 30";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Advice speed 50";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Advice speed 80";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Priority start";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
+                    signItem.Text = "Priority end";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+
+                    submenuSigns.DropDownItems.Add(signItem);
+                    menu.Items.Add(submenuSigns);
+
+                    //menu.Items.Add(Ch5);
                     menu.Items.Add(Ch6);
                     menu.Show(System.Windows.Forms.Cursor.Position);
                 }
@@ -598,120 +705,177 @@ public class OptieGUI : MonoBehaviour
         //}
     }
 
-    private void btnMaxSpeed_Click(object sender, EventArgs e)
+    private void signItem_Click(object sender, EventArgs e)
     {
-        //TODO   Maak een popup met een textboxje, yo
-        Button btnSave = new Button();
-
-
-        inputBox.Controls.Add(tbxMaxSpeed);
-        btnSave.Text = "Save";
-        btnSave.Click += new EventHandler(btnSave_Click);
-        inputBox.Controls.Add(btnSave);
-        btnSave.Top += 50;
-        inputBox.Show();
-    }
-
-    private void btnSave_Click(object sender, EventArgs e)
-    {
-        int maxSpeed;
-        int.TryParse(tbxMaxSpeed.Text, out maxSpeed);
-        if (maxSpeed > 0)
+        name = ((ToolStripMenuItem)sender).Text;
+        string rulename = "NO_SIGN";
+        switch (name)
         {
-            selectedGameobject.GetComponent<Road>().maxSpeed = maxSpeed;
+            case "No sign": 
+                rulename = "NO_SIGN";
+                break;
+            case "Max speed 30":
+                rulename = "MAXSPEED_30";
+                break;
+            case "Max speed 50":
+                rulename = "MAXSPEED_50";
+                break;
+            case "Max speed 80":
+                rulename = "MAXSPEED_80";
+                break;
+            case "No entry two way":
+                rulename = "NO_ENTRY_2_WAY";
+                break;
+            case "No entry one way":
+                rulename = "NO_ENTRY_1_WAY";
+                break;
+            case "Priority left":
+                rulename = "PRIORITY_LEFT";
+                break;
+            case "Priority right":
+                rulename = "PRIORITY_RIGHT";
+                break;
+            case "Stop":
+                rulename = "STOP";
+                break;
+            case "Advice speed 30":
+                rulename = "ADVICESPEED_30";
+                break;
+            case "Advice speed 50":
+                rulename = "ADVICESPEED_50";
+                break;
+            case "Advice speed 80":
+                rulename = "ADVICESPEED_80";
+                break;
+            case "Priority start":
+                rulename = "PRIORITY_START";
+                break;
+            case "Priority end":
+                rulename = "PRIORITY_END";
+                break;   
         }
-
-        menu.Show(System.Windows.Forms.Cursor.Position);
+        wegRegel = rulename;
         SaveRoadSettings();
-        inputBox.Close();
     }
 
-    private void btnTrafficsigns_Click(object sender, EventArgs e)
+    private void item_Click(object sender, EventArgs e)
     {
-        //TODO  Maak een popup met opties
-        inputSignBox.Controls.Add(NO_SIGN);
-        NO_SIGN.Text = "No sign";
-        inputSignBox.Controls.Add(MAXSPEED_30);
-        MAXSPEED_30.Text = "Max speed 30";
-        MAXSPEED_30.Top += 20;
-        inputSignBox.Controls.Add(MAXSPEED_50);
-        MAXSPEED_50.Text = "Max speed 50";
-        MAXSPEED_50.Top += 40;
-        inputSignBox.Controls.Add(MAXSPEED_80);
-        MAXSPEED_80.Text = "Max speed 80";
-        MAXSPEED_80.Top += 60;
-        inputSignBox.Controls.Add(NO_ENTRY_2_WAY);
-        NO_ENTRY_2_WAY.Text = "No entry 2-way";
-        NO_ENTRY_2_WAY.Top += 80;
-        inputSignBox.Controls.Add(NO_ENTRY_1_WAY);
-        NO_ENTRY_1_WAY.Text = "No entry 1-way";
-        NO_ENTRY_1_WAY.Top += 100;
-        inputSignBox.Controls.Add(PRIORITY_LEFT);
-        PRIORITY_LEFT.Text = "Priority left";
-        PRIORITY_LEFT.Top += 120;
-        inputSignBox.Controls.Add(PRIORITY_RIGHT);
-        PRIORITY_RIGHT.Text = "Priority right";
-        PRIORITY_RIGHT.Left += 100;
-        inputSignBox.Controls.Add(STOP);
-        STOP.Text = "STOP";
-        STOP.Left += 100;
-        STOP.Top += 20;
-        inputSignBox.Controls.Add(ADVICESPEED_30);
-        ADVICESPEED_30.Text = "Advice speed 30";
-        ADVICESPEED_30.Left += 100;
-        ADVICESPEED_30.Top += 40;
-        inputSignBox.Controls.Add(ADVICESPEED_50);
-        ADVICESPEED_50.Text = "Advice speed 50";
-        ADVICESPEED_50.Left += 100;
-        ADVICESPEED_50.Top += 60;
-        inputSignBox.Controls.Add(ADVICESPEED_80);
-        ADVICESPEED_80.Text = "Advice speed 80";
-        ADVICESPEED_80.Left += 100;
-        ADVICESPEED_80.Top += 80;
-        inputSignBox.Controls.Add(PRIORITY_START);
-        PRIORITY_START.Text = "Priority start";
-        PRIORITY_START.Left += 100;
-        PRIORITY_START.Top += 100;
-        inputSignBox.Controls.Add(PRIORITY_END);
-        PRIORITY_END.Text = "Priority end";
-        PRIORITY_END.Left += 100;
-        PRIORITY_END.Top += 120;
-
-        Button btnSaveSigns = new Button();
-
-        btnSaveSigns.Text = "Save";
-        btnSaveSigns.Click += new EventHandler(btnSaveSigns_Click);
-        inputSignBox.Controls.Add(btnSaveSigns);
-        btnSaveSigns.Top += 150;
-
-        inputSignBox.Show();
-    }
-
-    private void btnSaveSigns_Click(object sender, EventArgs e)
-    {
-        string name = "NO_SIGN";
-        Road.Rule chosen;
-        //TODO uitzoeken welke sign er gekozen is en deze zetten in de road.rule
-        foreach (RadioButton r in inputSignBox.Controls)
-        {
-            if (r.Checked)
-            {
-                name = r.Name;
-            }
-        }
-
-        foreach(Road.Rule rule in Enum.GetValues(typeof(Road.Rule)))
-        {
-            if (rule.Equals(name))
-            {
-                chosen = rule;
-                selectedGameobject.GetComponent<Road>().SetRules(chosen, true);
-            }
-        }
+        int.TryParse(((ToolStripMenuItem)sender).Text, out maxiSpeed);
         SaveRoadSettings();
-        inputSignBox.Close();
-        MessageBox.Show(selectedGameobject.GetComponent<Road>().GetRules().ToString());
     }
+
+
+    //private void btnMaxSpeed_Click(object sender, EventArgs e)
+    //{
+        
+    //    Button btnSave = new Button();
+    //    inputBox.Controls.Add(tbxMaxSpeed);
+    //    btnSave.Text = "Save";
+    //    btnSave.Click += new EventHandler(btnSave_Click);
+    //    inputBox.Controls.Add(btnSave);
+    //    btnSave.Top += 50;
+    //    inputBox.Show();
+    //}
+
+    //private void btnSave_Click(object sender, EventArgs e)
+    //{
+    //    int maxSpeed;
+    //    int.TryParse(tbxMaxSpeed.Text, out maxSpeed);
+    //    if (maxSpeed > 0)
+    //    {
+    //        selectedGameobject.GetComponent<Road>().maxSpeed = maxSpeed;
+    //    }
+
+    //    menu.Show(System.Windows.Forms.Cursor.Position);
+    //    SaveRoadSettings();
+    //    //inputBox.Close();
+    //    //inputBox.Dispose();
+    //}
+
+    //private void btnTrafficsigns_Click(object sender, EventArgs e)
+    //{
+    //    inputSignBox.Controls.Add(NO_SIGN);
+    //    NO_SIGN.Text = "No sign";
+    //    inputSignBox.Controls.Add(MAXSPEED_30);
+    //    MAXSPEED_30.Text = "Max speed 30";
+    //    MAXSPEED_30.Top += 20;
+    //    inputSignBox.Controls.Add(MAXSPEED_50);
+    //    MAXSPEED_50.Text = "Max speed 50";
+    //    MAXSPEED_50.Top += 40;
+    //    inputSignBox.Controls.Add(MAXSPEED_80);
+    //    MAXSPEED_80.Text = "Max speed 80";
+    //    MAXSPEED_80.Top += 60;
+    //    inputSignBox.Controls.Add(NO_ENTRY_2_WAY);
+    //    NO_ENTRY_2_WAY.Text = "No entry 2-way";
+    //    NO_ENTRY_2_WAY.Top += 80;
+    //    inputSignBox.Controls.Add(NO_ENTRY_1_WAY);
+    //    NO_ENTRY_1_WAY.Text = "No entry 1-way";
+    //    NO_ENTRY_1_WAY.Top += 100;
+    //    inputSignBox.Controls.Add(PRIORITY_LEFT);
+    //    PRIORITY_LEFT.Text = "Priority left";
+    //    PRIORITY_LEFT.Top += 120;
+    //    inputSignBox.Controls.Add(PRIORITY_RIGHT);
+    //    PRIORITY_RIGHT.Text = "Priority right";
+    //    PRIORITY_RIGHT.Left += 100;
+    //    inputSignBox.Controls.Add(STOP);
+    //    STOP.Text = "STOP";
+    //    STOP.Left += 100;
+    //    STOP.Top += 20;
+    //    inputSignBox.Controls.Add(ADVICESPEED_30);
+    //    ADVICESPEED_30.Text = "Advice speed 30";
+    //    ADVICESPEED_30.Left += 100;
+    //    ADVICESPEED_30.Top += 40;
+    //    inputSignBox.Controls.Add(ADVICESPEED_50);
+    //    ADVICESPEED_50.Text = "Advice speed 50";
+    //    ADVICESPEED_50.Left += 100;
+    //    ADVICESPEED_50.Top += 60;
+    //    inputSignBox.Controls.Add(ADVICESPEED_80);
+    //    ADVICESPEED_80.Text = "Advice speed 80";
+    //    ADVICESPEED_80.Left += 100;
+    //    ADVICESPEED_80.Top += 80;
+    //    inputSignBox.Controls.Add(PRIORITY_START);
+    //    PRIORITY_START.Text = "Priority start";
+    //    PRIORITY_START.Left += 100;
+    //    PRIORITY_START.Top += 100;
+    //    inputSignBox.Controls.Add(PRIORITY_END);
+    //    PRIORITY_END.Text = "Priority end";
+    //    PRIORITY_END.Left += 100;
+    //    PRIORITY_END.Top += 120;
+
+    //    Button btnSaveSigns = new Button();
+
+    //    btnSaveSigns.Text = "Save";
+    //    btnSaveSigns.Click += new EventHandler(btnSaveSigns_Click);
+    //    inputSignBox.Controls.Add(btnSaveSigns);
+    //    btnSaveSigns.Top += 150;
+    //    inputSignBox.Show();
+    //}
+
+    //private void btnSaveSigns_Click(object sender, EventArgs e)
+    //{
+    //    string name = "NO_SIGN";
+    //    foreach (Control c in inputSignBox.Controls)
+    //    {
+    //        if (c is RadioButton)
+    //        {
+    //            RadioButton r = (RadioButton)c;
+    //            if (r.Checked)
+    //            {
+    //                name = r.Name;
+    //            }
+    //        }
+    //    }
+
+    //    foreach(Road.Rule rule in Enum.GetValues(typeof(Road.Rule)))
+    //    {
+    //        if (rule.ToString().Equals(name))
+    //        {
+    //            selectedGameobject.GetComponent<Road>().SetRules(rule, true);
+    //        }
+    //    }
+    //    SaveRoadSettings();
+    //    inputSignBox.Dispose();
+    //}
     private void btnApply_Click(object sender, System.EventArgs e)
     {
         SaveRoadSettings();
@@ -723,6 +887,19 @@ public class OptieGUI : MonoBehaviour
         selectedGameobject.GetComponent<Road>().SetSidewalks(cbSidewalk.Checked);
         selectedGameobject.GetComponent<Road>().SetLightposts(cbLightpost.Checked);
 
+        foreach (Road.Rule rule in Enum.GetValues(typeof(Road.Rule)))
+        {
+            if (rule.ToString().Equals(wegRegel))
+            {
+                selectedGameobject.GetComponent<Road>().SetRules(rule, true);
+            }
+        }
+
+        if (maxiSpeed > 0)
+        {
+            MessageBox.Show(maxiSpeed.ToString());
+            selectedGameobject.GetComponent<Road>().maxSpeed = maxiSpeed;
+        }
     }
 }
 
