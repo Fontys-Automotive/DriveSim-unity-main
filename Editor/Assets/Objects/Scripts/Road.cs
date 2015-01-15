@@ -92,7 +92,7 @@ public class Road : MonoBehaviour
 	public void SetTrafficLight (bool b)
 	{
 		Transform tLight = this.transform.FindChild ("Verkeerslichten");
-
+        hasTrafficLights = b;
 		if (tLight != null) {
 			tLight.gameObject.SetActive (b);
 		}
