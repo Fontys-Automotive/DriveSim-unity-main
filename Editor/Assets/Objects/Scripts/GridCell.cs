@@ -202,7 +202,9 @@ public class GridCell : MonoBehaviour
 	public bool addOccupant (GameObject occ)
 	{
 		float tempspeed = 0;
-		if (isAllowed (occ) && !isOccupied) {
+		if((occ.GetComponent<Road>() != null & !isOccupied) || (occ.GetComponent<Road>() == null))
+		{
+		if (isAllowed (occ)) {
 			if (occupants == null) {
 				occupants = new ArrayList ();	
 			}
@@ -239,6 +241,7 @@ public class GridCell : MonoBehaviour
 			//Debug.Log("occupant loaded");
 			isOccupied = true;
 			return true;
+		}
 		}
 		return false;
 	}

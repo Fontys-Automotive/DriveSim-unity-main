@@ -417,7 +417,7 @@ public class GridScript : MonoBehaviour
 	private void checkTypeObject(GridCell selectedCell, GameObject objToPlace)
 	{
 		//the object we want to place is a road object
-		if((objToPlace.GetComponent("Road") as Road) != null)
+		if((objToPlace.GetComponent<Road>()) != null)
 		{
 			switch (objToPlace.GetComponent<Road>().roadType) 
 			{
@@ -497,6 +497,11 @@ public class GridScript : MonoBehaviour
 				placeItem.PlaceObject(selectedCell, objToPlace);
 					break;
 			}
+		}
+		else
+		{
+			//The object we want to place is not a road object
+			placeItem.PlaceObject(selectedCell, objToPlace);
 		}
 	}
 
