@@ -36,7 +36,6 @@ public class Road : MonoBehaviour
 		ROUNDABOUT,
 		ROUNDABOUT2,
 		GolqmZavoi,
-		BIGROUNDABOUT,
 
 	}
 	//public boolean hasTrafficLight = false;

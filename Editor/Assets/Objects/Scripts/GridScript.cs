@@ -298,8 +298,8 @@ public class GridScript : MonoBehaviour
 							//If it's a grid square...
 							if (hit.transform.gameObject.tag == "grid") {
 								GridCell cellScript = hit.transform.GetComponent<GridCell> ();
+								placeItem.PlaceObject (cellScript, objectToPlace);
 
-								checkTypeObject(cellScript, objectToPlace);
 							}
 							/*
 							//If it's a selectable object... Select it!
@@ -409,102 +409,5 @@ public class GridScript : MonoBehaviour
 		GameObject g = cells[y,x];
 		return g.GetComponent<GridCell>();
 	}
-
-	//Added by Eddy
-	/// <summary>
-	/// Checks which type of object is being placed on the grid and gives it some condition.
-	/// </summary>
-	/// <param name="selectedCell">Selected cell.</param>
-	/// <param name="objToPlace">Object to place.</param>
-	private void checkTypeObject(GridCell selectedCell, GameObject objToPlace)
-	{
-		if((objToPlace.GetComponent("Road") as Road) != null)
-		{
-			switch (objToPlace.GetComponent<Road>().roadType) 
-			{
-			case Road.RoadType.ROUNDABOUT:
-			//This roundabout takes 4 cells. 
-			//One cell to the left, onr to the top, and one top left.
-			if(placeItem.PlaceObject(selectedCell, objToPlace))
-			{
-				//the object is successfully placed. Make the cells next to it unavailable for placing
-					if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null)
-					{
-						getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() + 1)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied = true;			//top		
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied = true;	//topleft
-					}
-				}
-				break;
-			case Road.RoadType.ROUNDABOUT2:
-				if(placeItem.PlaceObject(selectedCell, objToPlace))
-				{
-					//the object is successfully placed. Make the cells next to it unavailable for placing
-					if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null)
-					{
-						getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() - 1)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() - 1)).isOccupied = true;			//bot		
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() - 1)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() - 1)).isOccupied = true;	//botleft
-					}
-				}
-				break;
-			case Road.RoadType.BIGROUNDABOUT:
-				//this roundabout takes 6 cells. god damn so big!!
-				if(placeItem.PlaceObject(selectedCell, objToPlace))
-				{
-					//the object is successfully placed. Make the cells next to it unavailable for placing
-					if(getCell((selectedCell.getX() - 1), selectedCell.getY()) != null)
-					{
-						getCell((selectedCell.getX() - 1), selectedCell.getY()).isOccupied = true;			//left
-					}
-					if(getCell((selectedCell.getX() - 2), selectedCell.getY()) != null)
-					{
-						getCell((selectedCell.getX() - 2), selectedCell.getY()).isOccupied = true;			//leftleft
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() + 1)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() + 1)).isOccupied = true;			//top		
-					}
-					if(getCell(selectedCell.getX(), (selectedCell.getY() + 2)) != null)
-					{
-						getCell(selectedCell.getX(), (selectedCell.getY() + 2)).isOccupied = true;			//toptop		
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() + 1)).isOccupied = true;	//middle
-					}
-					if(getCell((selectedCell.getX() - 1), (selectedCell.getY() + 2)) != null)
-					{
-						getCell((selectedCell.getX() - 1), (selectedCell.getY() + 2)).isOccupied = true;	//lefttoptop
-					}
-					if(getCell((selectedCell.getX() - 2), (selectedCell.getY() + 1)) != null)
-					{
-						getCell((selectedCell.getX() - 2), (selectedCell.getY() + 1)).isOccupied = true;	//leftlefttop
-					}
-					if(getCell((selectedCell.getX() - 2), (selectedCell.getY() + 2)) != null)
-					{
-						getCell((selectedCell.getX() - 2), (selectedCell.getY() + 2)).isOccupied = true;	//leftlefttoptop
-					}
-				}
-				break;
-				default:
-				placeItem.PlaceObject(selectedCell, objToPlace);
-					break;
-			}
-		}
-	}
-
 }
 
