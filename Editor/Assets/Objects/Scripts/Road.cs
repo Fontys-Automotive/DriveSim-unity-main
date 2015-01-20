@@ -67,7 +67,7 @@ public class Road : MonoBehaviour
 //		}
 		//SetSidewalks (true, true);
 		//this.maxSpeed = 50;
-		SetSign (Rule.NO_SIGN);
+		//SetSign (Rule.NO_SIGN);
 		carsOnIntersection = new ArrayList ();
 		problemCars = new ArrayList ();
 	}
@@ -75,9 +75,9 @@ public class Road : MonoBehaviour
 	public void SetRules (Rule rules, bool showSign)
 	{
 		this.ruleset = rules;
-		if (showSign) {
-			this.SetSign (rules);
-		}
+        //if (showSign) {
+        //    this.SetSign (rules);
+        //}
 	}
 	
 	public Rule GetRules ()
