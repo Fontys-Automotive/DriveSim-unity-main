@@ -76,8 +76,7 @@ public class Road : MonoBehaviour
 	{
 		this.ruleset = rules;
 		if (showSign) {
-            //MOET WEER WERKEN
-			//this.SetSign (rules);
+			this.SetSign (rules);
 		}
 	}
 	
