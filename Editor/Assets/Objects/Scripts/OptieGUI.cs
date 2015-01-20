@@ -713,7 +713,7 @@ public class OptieGUI : MonoBehaviour
                 rulename = "NO_SIGN";
                 break;
             case "Max speed 30":
-                rulename = "MAXSPEED_30";
+                rulename = "c_MAXSPEED_30";
                 break;
             case "Max speed 50":
                 rulename = "MAXSPEED_50";
