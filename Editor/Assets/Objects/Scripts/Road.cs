@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Windows.Forms;
 public class Road : MonoBehaviour
 {
 	public enum Rule
@@ -40,6 +40,7 @@ public class Road : MonoBehaviour
 	public bool hasSidewalks;
 	public bool hasLightposts = false;
 	public bool hasTrafficLights = false;
+
 	private GameObject sidewalks;
 	//private GameObject sidewalkLeft;
 	//private GameObject sidewalkRight;
@@ -67,15 +68,17 @@ public class Road : MonoBehaviour
 //		}
 		//SetSidewalks (true, true);
 		//this.maxSpeed = 50;
-		SetSign (Rule.NO_SIGN);
+		//SetSign (Rule.NO_SIGN);
 		carsOnIntersection = new ArrayList ();
 		problemCars = new ArrayList ();
 	}
 	
 	public void SetRules (Rule rules, bool showSign)
 	{
-		this.ruleset = rules;
+		ruleset = rules;
 		if (showSign) {
+            this.SetSign(rules);
+            
             //MOET WEER WERKEN
 			//this.SetSign (rules);
 		}
@@ -181,14 +184,25 @@ public class Road : MonoBehaviour
 	private void SetSign (Rule s)
 	{
 		//Set the sign type 
-		this.ruleset = s;
-		GameObject sObject;
-		if (this.transform.FindChild ("Verkeersborden") != null) {
+		ruleset = s;
+
+        GameObject sObject;
+        
+        MessageBox.Show("aantal childeren: " + transform.childCount.ToString());
+        MessageBox.Show(this.transform.GetChild(0).ToString());
+        MessageBox.Show(this.transform.GetChild(1).ToString());
+        MessageBox.Show(this.transform.GetChild(2).ToString());
+        MessageBox.Show(this.transform.GetChild(3).ToString());
+        MessageBox.Show(this.transform.GetChild(4).ToString());
+        
+        
+
+        if (this.transform.FindChild ("Verkeersborden") != null) {
 			sObject = this.transform.FindChild ("Verkeersborden").gameObject;
 			foreach (Transform t in sObject.transform) {
 				t.gameObject.SetActive (false);
 			}
-		} else {
+		} else {    
 			return;
 		}
 
@@ -198,10 +212,11 @@ public class Road : MonoBehaviour
 		//s is square
 		//45 is diamond
 		//Check what category needs to be enabled
-		if (this.ruleset != Rule.NO_SIGN) {
+        MessageBox.Show("niggahwhuuuut?");
+		if (ruleset != Rule.NO_SIGN) {
 			//Pole always needs to be enabled! Unless you turn off the signs...
 			sObject.transform.FindChild ("Pole").gameObject.SetActive (true);
-			
+            MessageBox.Show("test");
 			string[] words = this.ruleset.ToString ().Split ('_');
 			string shape = words [words.Length - 1];
 			//Set the sObject to the sign category, so you can alter stuff in that gameobject
