@@ -139,16 +139,16 @@
      <None Include="Assets\TempCar (Delete later)\ReadMe.txt" />
      <None Include="Assets\Objects\Car\Pro Standard Assets\Image Based\EdgeDetectX.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Rudi/Desktop/DriveSim Github/DriveSim-unity-main/Editor/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Simon/Desktop/Automotive/DriveSim-unity-main/Editor/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="alljoyn_unity">
- <HintPath>C:/Users/Rudi/Desktop/DriveSim Github/DriveSim-unity-main/Editor/Assets/Plugins/alljoyn_unity.dll</HintPath>
+ <HintPath>C:/Users/Simon/Desktop/Automotive/DriveSim-unity-main/Editor/Assets/Plugins/alljoyn_unity.dll</HintPath>
  </Reference>
  <Reference Include="System.Windows.Forms">
- <HintPath>C:/Users/Rudi/Desktop/DriveSim Github/DriveSim-unity-main/Editor/Assets/Plugins/System.Windows.Forms.dll</HintPath>
+ <HintPath>C:/Users/Simon/Desktop/Automotive/DriveSim-unity-main/Editor/Assets/Plugins/System.Windows.Forms.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

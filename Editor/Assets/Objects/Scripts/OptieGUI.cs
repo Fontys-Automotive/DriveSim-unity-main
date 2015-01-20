@@ -374,6 +374,7 @@ public class OptieGUI : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
+                    MessageBox.Show(selectedGameobject.GetComponent<Road>().maxSpeed.ToString());
                     menu.Close();
                     menu.Items.Clear();
 
@@ -754,7 +755,7 @@ public class OptieGUI : MonoBehaviour
                 break;   
         }
         wegRegel = rulename;
-        SaveRoadSettings();        
+        SaveRoadSettings();
     }
 
     private void item_Click(object sender, EventArgs e)
@@ -843,7 +844,7 @@ public class OptieGUI : MonoBehaviour
 
     //    Button btnSaveSigns = new Button();
 
-    //    btnSaveSigns.Text = "Save";   
+    //    btnSaveSigns.Text = "Save";
     //    btnSaveSigns.Click += new EventHandler(btnSaveSigns_Click);
     //    inputSignBox.Controls.Add(btnSaveSigns);
     //    btnSaveSigns.Top += 150;
@@ -896,6 +897,7 @@ public class OptieGUI : MonoBehaviour
 
         if (maxiSpeed > 0)
         {
+            MessageBox.Show(maxiSpeed.ToString());
             selectedGameobject.GetComponent<Road>().maxSpeed = maxiSpeed;
         }
     }
