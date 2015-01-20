@@ -197,12 +197,13 @@ public class Road : MonoBehaviour
 		//s is square
 		//45 is diamond
 		//Check what category needs to be enabled
+        string shape = "";
 		if (this.ruleset != Rule.NO_SIGN) {
 			//Pole always needs to be enabled! Unless you turn off the signs...
 			sObject.transform.FindChild ("Pole").gameObject.SetActive (true);
 			
 			string[] words = this.ruleset.ToString ().Split ('_');
-			string shape = words [words.Length - 1];
+			shape = words [words.Length - 1];
 			//Set the sObject to the sign category, so you can alter stuff in that gameobject
 			Debug.Log (shape + " is the shape to find");
 			sObject.transform.FindChild (shape).gameObject.SetActive (true);	
@@ -212,56 +213,54 @@ public class Road : MonoBehaviour
 				t.gameObject.SetActive (false);
 			}
 			
-			Debug.Log (this.ruleset.ToString ());
 			
 			sObject.transform.FindChild ("Bord").gameObject.SetActive (true);
 			sObject.transform.FindChild (this.ruleset.ToString ()).gameObject.SetActive (true);
 		}	  
-			
-		
 		
 //		//Check for each sign what models need to be enabled etc.
-//		switch (this.sign) {
-//		case Sign.MAX_30_c:
-//			sObject.transform.FindChild ("A1-030").gameObject.SetActive (true);
-//			break;
-//		case Sign.MAX_50_c:
-//			sObject.transform.FindChild ("A1-050").gameObject.SetActive (true);
-//			break;
-//		case Sign.MAX_80_c:
-//			sObject.transform.FindChild ("A1-080").gameObject.SetActive (true);
-//			break;
-//		case Sign.NO_ENTRY_1WAY_c:
-//			sObject.transform.FindChild ("C2").gameObject.SetActive (true);
-//			break;
-//		case Sign.NO_ENTRY_2WAY_c:
-//			sObject.transform.FindChild ("C1").gameObject.SetActive (true);
-//			break;		
-//		case Sign.STOP_stop:
-//			sObject.transform.FindChild ("B7").gameObject.SetActive (true);
-//			break;	
-//		case Sign.ADVICE_30_s:
-//			sObject.transform.FindChild ("A4-030").gameObject.SetActive (true);
-//			break;
-//		case Sign.ADVICE_50_s:
-//			sObject.transform.FindChild ("A4-050").gameObject.SetActive (true);
-//			break;
-//		case Sign.ADVICE_80_s:
-//			sObject.transform.FindChild ("A4-080").gameObject.SetActive (true);
-//			break;
-//		case Sign.PRIORITY_CROSSING_t:
-//			sObject.transform.FindChild ("B3").gameObject.SetActive (true);
-//			break;
-//		case Sign.PRIORITY_LEFT_t:
-//			sObject.transform.FindChild ("B4").gameObject.SetActive (true);
-//			break;
-//		case Sign.PRIORITY_RIGHT_t:
-//			sObject.transform.FindChild ("B5").gameObject.SetActive (true);
-//			break;
-//			
-//		default:
-//			break;
-//		}
+        switch (shape)
+        {
+            case "30":
+                sObject.transform.FindChild("a1-30").gameObject.SetActive(true);
+                break;
+            //case Sign.MAX_50_c:
+            //    sObject.transform.FindChild("A1-050").gameObject.SetActive(true);
+            //    break;
+            //case Sign.MAX_80_c:
+            //    sObject.transform.FindChild("A1-080").gameObject.SetActive(true);
+            //    break;
+            //case Sign.NO_ENTRY_1WAY_c:
+            //    sObject.transform.FindChild("C2").gameObject.SetActive(true);
+            //    break;
+            //case Sign.NO_ENTRY_2WAY_c:
+            //    sObject.transform.FindChild("C1").gameObject.SetActive(true);
+            //    break;
+            //case Sign.STOP_stop:
+            //    sObject.transform.FindChild("B7").gameObject.SetActive(true);
+            //    break;
+            //case Sign.ADVICE_30_s:
+            //    sObject.transform.FindChild("A4-030").gameObject.SetActive(true);
+            //    break;
+            //case Sign.ADVICE_50_s:
+            //    sObject.transform.FindChild("A4-050").gameObject.SetActive(true);
+            //    break;
+            //case Sign.ADVICE_80_s:
+            //    sObject.transform.FindChild("A4-080").gameObject.SetActive(true);
+            //    break;
+            //case Sign.PRIORITY_CROSSING_t:
+            //    sObject.transform.FindChild("B3").gameObject.SetActive(true);
+            //    break;
+            //case Sign.PRIORITY_LEFT_t:
+            //    sObject.transform.FindChild("B4").gameObject.SetActive(true);
+            //    break;
+            //case Sign.PRIORITY_RIGHT_t:
+            //    sObject.transform.FindChild("B5").gameObject.SetActive(true);
+            //    break;
+
+            default:
+                break;
+        }
 	}
 
 	public ArrayList GetCarsOnIntersection ()
