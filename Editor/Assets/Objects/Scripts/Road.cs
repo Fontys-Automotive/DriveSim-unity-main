@@ -198,7 +198,6 @@ public class Road : MonoBehaviour
             sObject = this.transform.FindChild("Verkeersborden").gameObject;
             foreach (Transform t in sObject.transform)
             {
-                MessageBox.Show(t.name);
                 t.gameObject.SetActive(false);
             }
         }
