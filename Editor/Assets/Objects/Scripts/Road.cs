@@ -198,6 +198,7 @@ public class Road : MonoBehaviour
             sObject = this.transform.FindChild("Verkeersborden").gameObject;
             foreach (Transform t in sObject.transform)
             {
+                MessageBox.Show(t.name);
                 t.gameObject.SetActive(false);
             }
         }
@@ -272,30 +273,61 @@ public class Road : MonoBehaviour
                 }
                 catch { }
                 break;
-            case "s_ADVICE_30":
+            case "s_ADVICESPEED_30":
                 try
                 {
-                    //sObject.transform.FindChild("stop_STOP").gameObject.SetActive(true);
+                    sObject.transform.FindChild("ADVICE_30_s").gameObject.SetActive(true);
                 }
                 catch { }
                 break;
-            //case Sign.ADVICE_30_s:
-            //    sObject.transform.FindChild("A4-030").gameObject.SetActive(true);
+            case "s_ADVICESPEED_50":
+                try
+                {
+                    sObject.transform.FindChild("ADVICE_50_s").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
+            case "s_ADVICESPEED_80":
+                try
+                {
+                    sObject.transform.FindChild("ADVICE_80_s").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
+            case "t_PRIORITY_CROSSING":
+                try
+                {
+                    sObject.transform.FindChild("PRIORITY_CROSSING_t").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
+            case "t_PRIORITY_LEFT":
+                try
+                {
+                    sObject.transform.FindChild("PRIORITY_LEFT_t").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
+            case "t_PRIORITY_RIGHT":
+                try
+                {
+                    sObject.transform.FindChild("PRIORITY_RIGHT_t").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
+            //case "d_PRIORITY_START":
+            //    try
+            //    {
+            //        sObject.transform.FindChild("PRIORITY_RIGHT_t").gameObject.SetActive(true);
+            //    }
+            //    catch { }
             //    break;
-            //case Sign.ADVICE_50_s:
-            //    sObject.transform.FindChild("A4-050").gameObject.SetActive(true);
-            //    break;
-            //case Sign.ADVICE_80_s:
-            //    sObject.transform.FindChild("A4-080").gameObject.SetActive(true);
-            //    break;
-            //case Sign.PRIORITY_CROSSING_t:
-            //    sObject.transform.FindChild("B3").gameObject.SetActive(true);
-            //    break;
-            //case Sign.PRIORITY_LEFT_t:
-            //    sObject.transform.FindChild("B4").gameObject.SetActive(true);
-            //    break;
-            //case Sign.PRIORITY_RIGHT_t:
-            //    sObject.transform.FindChild("B5").gameObject.SetActive(true);
+            //case "d_PRIORITY_END":
+            //    try
+            //    {
+            //        sObject.transform.FindChild("PRIORITY_RIGHT_t").gameObject.SetActive(true);
+            //    }
+            //    catch { }
             //    break;
 
             default:

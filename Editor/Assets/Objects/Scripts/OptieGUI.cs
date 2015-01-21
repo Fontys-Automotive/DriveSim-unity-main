@@ -459,6 +459,10 @@ public class OptieGUI : MonoBehaviour
                     signItem.Click += new EventHandler(signItem_Click);
                     submenuSigns.DropDownItems.Add(signItem);
                     signItem = new ToolStripMenuItem();
+                    signItem.Text = "Priority crossing";
+                    signItem.Click += new EventHandler(signItem_Click);
+                    submenuSigns.DropDownItems.Add(signItem);
+                    signItem = new ToolStripMenuItem();
                     signItem.Text = "Priority right";
                     signItem.Click += new EventHandler(signItem_Click);
                     submenuSigns.DropDownItems.Add(signItem);
@@ -730,6 +734,9 @@ public class OptieGUI : MonoBehaviour
                 break;
             case "Priority right":
                 rulename = "t_PRIORITY_RIGHT";
+                break;
+            case "Priority crossing":
+                rulename = "t_PRIORITY_CROSSING";
                 break;
             case "Stop":
                 rulename = "stop_STOP";
