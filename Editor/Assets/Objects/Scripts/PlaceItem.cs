@@ -19,7 +19,10 @@ public class PlaceItem : Object {
 		bibeko50.Add(Resources.Load ("PlacedObjects/bibeko-50-bocht-klein") as GameObject);
 		bibeko50.Add(Resources.Load ("PlacedObjects/bibeko-50-T-stuk") as GameObject);
 		bibeko50.Add(Resources.Load ("PlacedObjects/bibeko-50-kruispunt") as GameObject);
-		bibeko50.Add (Resources.Load ("lacedObjects/krygovomdf") as GameObject);
+		bibeko50.Add (Resources.Load ("PlacedObjects/krygovomdf") as GameObject);
+        bibeko50.Add(Resources.Load("PlacedObjects/ROUNDABOUT") as GameObject);
+        bibeko50.Add(Resources.Load("PlacedObjects/ROUNDABOUT2") as GameObject);
+        bibeko50.Add(Resources.Load("PlacedObjects/ROUND9") as GameObject);
 		//Add the arraylists with one type of road to allRoads
 		allRoads.Add (bibeko50);
 
@@ -41,6 +44,7 @@ public class PlaceItem : Object {
 				if(previousCell == null) {
 					previousCell = new GridCell();
 				}
+
 				//Use drawroad in case a straightRoad is being placed
 				if(straightRoads.Contains(objToPlace)) {
 					//Find the corresponding roads

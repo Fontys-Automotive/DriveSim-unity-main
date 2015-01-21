@@ -4,13 +4,14 @@ using System.Collections;
 public class GridCell : MonoBehaviour
 {
 	private int gridId;
-	private int x;
-	private int y;
+	private int xDis;
+	private int yDis;
 
 	private ArrayList occupants = new ArrayList ();
 	private GameObject ghost = null;
 	private bool ghosting = false;
 	private GameObject copiedGhost = null;
+    private PlacedObject copiedPlacedObject = null;
 
 	//if Occupied is true, the gridcell has something on it
 	private bool Occupied = false;
@@ -24,16 +25,12 @@ public class GridCell : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		//occupants = new ArrayList ();	
+		occupants = new ArrayList ();	
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-//		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-//		RaycastHit hit;
-//		int mask = 1 << 10;
-
 		GameObject ghost = null;
 
 		if (ghosting) {
@@ -42,14 +39,46 @@ public class GridCell : MonoBehaviour
 			GridScript gridScript = GameObject.FindWithTag ("MainCamera").GetComponent<GridScript> ();
 			GameObject sObj = gridScript.getSelectedObject ();
 
+
 			if (sObj != null) {
 				if (isAllowed (sObj)) {
 					if (copiedGhost != null) {
+                        PlacedObject placedObj = sObj.GetComponent<PlacedObject>();
+                        if (placedObj == null)
+                            Debug.Log("MISTAKE!");
+                        
 						//If the ghost is not null, all you need to do is update ghost to selection
-						Vector3 gridPosition = this.transform.position;
-						gridPosition.y = 0.1f;
-						copiedGhost.transform.position = gridPosition;
-						copiedGhost.transform.rotation = sObj.transform.rotation;
+                       // for (int iCell = 0; iCell < GameObject.FindWithTag("MainCamera").GetComponent<GridScript>().getSelectedObject().GetComponent<PlacedObject>().getCellPlaces().Length; iCell++)
+                        //{
+                            /*
+                            #region Create new ghost
+                            //CREATE NEW GHOST FOR EACH GRID CELL TAKEN BY THE OBJECT
+                            ghost = sObj;
+                            copiedGhost = GameObject.Instantiate(ghost) as GameObject;
+                            copiedGhost.tag = "Untagged";
+                            
+                            //Remove all colliders
+                            Collider[] colliders = copiedGhost.GetComponents<Collider>();
+                            Collider[] colliders2 = copiedGhost.GetComponentsInChildren<Collider>();
+                            for (int i = 0; i < colliders.Length; i++)
+                            {
+                                colliders[i].GetComponent<Collider>().enabled = false;
+                            }
+                            for (int i = 0; i < colliders2.Length; i++)
+                            {
+                                colliders2[i].GetComponent<Collider>().enabled = false;
+                            }
+                            #endregion
+                            */
+                            //Set position for the new ghost, using the array of cells, reserved by the PlacedObject
+                            /*xDis = int.Parse(GameObject.FindWithTag("MainCamera").GetComponent<GridScript>().getSelectedObject().GetComponent<PlacedObject>().getCellPlaces()[iCell].Split(',')[0]);
+                            yDis = int.Parse(GameObject.FindWithTag("MainCamera").GetComponent<GridScript>().getSelectedObject().GetComponent<PlacedObject>().getCellPlaces()[iCell].Split(',')[1]);
+                                Vector3 gridPosition = GameObject.FindObjectOfType<GridScript>().getCells()[GameObject.FindWithTag("MainCamera").GetComponent<GridScript>().getHoveredCellIndexes()[0] + xDis, GameObject.FindWithTag("MainCamera").GetComponent<GridScript>().getHoveredCellIndexes()[1] + yDis].transform.position;
+                                gridPosition.y = 0.1f;
+                                //copiedGhost.transform.position = gridPosition;
+                             * */
+                    //    }
+						
 					} else {
 						//If it is, create a new ghost
 						//Instantiate it
@@ -86,15 +115,22 @@ public class GridCell : MonoBehaviour
 	void OnMouseEnter ()
 	{
 
-
 		bool running = GameObject.FindGameObjectWithTag ("MainScripts").GetComponent<SimulationScript> ().IsSimulationRunning ();
 		if (!running) {
+            GridScript gridScript = GameObject.FindWithTag("MainCamera").GetComponent<GridScript>();
+            if (!gridScript.getDeleteMode())
+            {
+                ghosting = true;
+            }
+            //!Todo - Call GridScript method to show ghosts, using this gridCell as base position.
+            //float x = this.transform.position.x;
+            //float y = this.transform.position.y;
+            //float z = this.transform.position.z;
 
+          //  ghost.transform.position.Set(x,y,z);
 			EnterColor ();
-			GridScript gridScript = GameObject.FindWithTag ("MainCamera").GetComponent<GridScript> ();
-			if (!gridScript.getDeleteMode ()) {
-				ghosting = true;
-			}
+          //  int[] indexes = gridScript.getHoveredCellIndexes();
+			
 		}
 	} 
 
@@ -108,15 +144,15 @@ public class GridCell : MonoBehaviour
 	private void EnterColor ()
 	{
 		Color color = renderer.material.color;
-		color.a = 0.25f;
+		//color.a = 0.25f;
 
 		GridScript gridScript = GameObject.FindWithTag ("MainCamera").GetComponent<GridScript> ();
 		if (!gridScript.getDeleteMode ()) {
 					
 			//Normal mode. white squares.
-			color.r = 1;
+			color.r = 0;
 			color.g = 1;
-			color.b = 1;
+			color.b = 0;
 		} else {	
 			//Delete mode. Red squares.
 			color.r = 1;
@@ -264,12 +300,15 @@ public class GridCell : MonoBehaviour
 					return false;
 				}
 			}
+             
 		}
 		return true;
 	}
 	public void removeGhost ()
 	{
 		if (copiedGhost != null) {
+            //copiedGhost.transform.position.Set(-999, 999, 999);
+            //(PlacedObject)copiedGhost.transform.position.Set(-999, 999, 999);
 			GameObject.DestroyImmediate (copiedGhost);
 			copiedGhost = null;
 		}
@@ -326,18 +365,18 @@ public class GridCell : MonoBehaviour
 	public void setId (int i, int x, int y)
 	{
 		gridId = i;
-		this.x = x;
-		this.y = y;
+		this.xDis = x;
+		this.yDis = y;
 	}
 
 	public int getX ()
 	{
-		return x;
+		return xDis;
 	}
 
 	public int getY ()
 	{
-		return y;
+		return yDis;
 	}
 	
 	

@@ -88,8 +88,8 @@ public class TrafficLight : MonoBehaviour
 
 	public LIGHT getCurrentLight ()
 	{
-
-		if (redLight != null && orangeLight != null && greenLight != null) {
+		if (redLight != null && orangeLight != null && greenLight != null)
+        {
 			if (redLight.activeSelf) {
 				currentLight = LIGHT.RED;
 			}
