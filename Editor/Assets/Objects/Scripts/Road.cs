@@ -8,23 +8,23 @@ public class Road : MonoBehaviour
     {
         NO_SIGN,
         c_MAXSPEED_30,
-        MAXSPEED_50,
-        MAXSPEED_80,
-        NO_ENTRY_2_WAY,
-        NO_ENTRY_1_WAY,
+        c_MAXSPEED_50,
+        c_MAXSPEED_80,
+        c_NO_ENTRY_2WAY,
+        c_NO_ENTRY_1WAY,
 
-        PRIORITY_CROSSING,
-        PRIORITY_LEFT,
-        PRIORITY_RIGHT,
+        t_PRIORITY_CROSSING,
+        t_PRIORITY_LEFT,
+        t_PRIORITY_RIGHT,
 
-        STOP,
+        stop_STOP,
 
-        ADVICESPEED_30,
-        ADVICESPEED_50,
-        ADVICESPEED_80,
+        s_ADVICESPEED_30,
+        s_ADVICESPEED_50,
+        s_ADVICESPEED_80,
 
-        PRIORITY_START,
-        PRIORITY_END
+        d_PRIORITY_START,
+        d_PRIORITY_END
     }
 	;
 
@@ -231,7 +231,7 @@ public class Road : MonoBehaviour
                 t.gameObject.SetActive(false);
             }
             try { sObject.transform.FindChild("Bord").gameObject.SetActive(true); }
-            catch { MessageBox.Show("nuh-uh"); }
+            catch {  }
         }
 
         //		//Check for each sign what models need to be enabled etc.
@@ -242,31 +242,43 @@ public class Road : MonoBehaviour
                 {
                     sObject.transform.FindChild("MAX_30_c").gameObject.SetActive(true);
                 }
-                catch { MessageBox.Show("allicht niet"); }
+                catch {  }
                 break;
             case "c_MAXSPEED_50":
                 try
                 {
                     sObject.transform.FindChild("MAX_50_c").gameObject.SetActive(true);
                 }
-                catch { MessageBox.Show("allicht niet"); }
+                catch {  }
                 break;
             case "c_MAXSPEED_80":
                 try
                 {
                     sObject.transform.FindChild("MAX_80_c").gameObject.SetActive(true);
                 }
-                catch { MessageBox.Show("allicht niet"); }
+                catch {  }
                 break;
-            //case Sign.NO_ENTRY_1WAY_c:
-            //    sObject.transform.FindChild("C2").gameObject.SetActive(true);
-            //    break;
-            //case Sign.NO_ENTRY_2WAY_c:
-            //    sObject.transform.FindChild("C1").gameObject.SetActive(true);
-            //    break;
-            //case Sign.STOP_stop:
-            //    sObject.transform.FindChild("B7").gameObject.SetActive(true);
-            //    break;
+            case "c_NO_ENTRY_2WAY":
+                try
+                {
+                    sObject.transform.FindChild("NO_ENTRY_2WAY_c").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
+            case "c_NO_ENTRY_1WAY":
+                try
+                {
+                    sObject.transform.FindChild("NO_ENTRY_1WAY_c").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
+            case "s_ADVICE_30":
+                try
+                {
+                    //sObject.transform.FindChild("stop_STOP").gameObject.SetActive(true);
+                }
+                catch { }
+                break;
             //case Sign.ADVICE_30_s:
             //    sObject.transform.FindChild("A4-030").gameObject.SetActive(true);
             //    break;

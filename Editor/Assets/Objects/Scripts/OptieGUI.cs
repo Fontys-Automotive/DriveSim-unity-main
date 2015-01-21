@@ -7,8 +7,6 @@ using UnityEditor;
 
 public class OptieGUI : MonoBehaviour
 {
-    Form inputBox = new Form();
-    Form inputSignBox = new Form();
     private GUIStyle style;
     private Texture2D bgTex;
     private GUIStyle styleButton;
@@ -722,34 +720,34 @@ public class OptieGUI : MonoBehaviour
                 rulename = "c_MAXSPEED_80";
                 break;
             case "No entry two way":
-                rulename = "NO_ENTRY_2_WAY";
+                rulename = "c_NO_ENTRY_2WAY";
                 break;
             case "No entry one way":
-                rulename = "NO_ENTRY_1_WAY";
+                rulename = "c_NO_ENTRY_1WAY";
                 break;
             case "Priority left":
-                rulename = "PRIORITY_LEFT";
+                rulename = "t_PRIORITY_LEFT";
                 break;
             case "Priority right":
-                rulename = "PRIORITY_RIGHT";
+                rulename = "t_PRIORITY_RIGHT";
                 break;
             case "Stop":
-                rulename = "STOP";
+                rulename = "stop_STOP";
                 break;
             case "Advice speed 30":
-                rulename = "ADVICESPEED_30";
+                rulename = "s_ADVICESPEED_30";
                 break;
             case "Advice speed 50":
-                rulename = "ADVICESPEED_50";
+                rulename = "s_ADVICESPEED_50";
                 break;
             case "Advice speed 80":
-                rulename = "ADVICESPEED_80";
+                rulename = "s_ADVICESPEED_80";
                 break;
             case "Priority start":
-                rulename = "PRIORITY_START";
+                rulename = "d_PRIORITY_START";
                 break;
             case "Priority end":
-                rulename = "PRIORITY_END";
+                rulename = "d_PRIORITY_END";
                 break;
         }
         wegRegel = rulename;
