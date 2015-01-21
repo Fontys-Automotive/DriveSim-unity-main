@@ -68,7 +68,7 @@ public class Road : MonoBehaviour
         //		}
         //SetSidewalks (true, true);
         //this.maxSpeed = 50;
-        SetSign(Rule.NO_SIGN);
+
         carsOnIntersection = new ArrayList();
         problemCars = new ArrayList();
     }
@@ -230,9 +230,8 @@ public class Road : MonoBehaviour
             {
                 t.gameObject.SetActive(false);
             }
-            //sObject.transform.FindChild("Bord").gameObject.SetActive(true);
-
-            //sObject.transform.FindChild (this.ruleset.ToString()).gameObject.SetActive (true);
+            try { sObject.transform.FindChild("Bord").gameObject.SetActive(true); }
+            catch { MessageBox.Show("nuh-uh"); }
         }
 
         //		//Check for each sign what models need to be enabled etc.
@@ -241,16 +240,24 @@ public class Road : MonoBehaviour
             case "c_MAXSPEED_30":
                 try
                 {
-                    this.transform.Find("a1-30").gameObject.SetActive(true);
+                    sObject.transform.FindChild("MAX_30_c").gameObject.SetActive(true);
                 }
                 catch { MessageBox.Show("allicht niet"); }
                 break;
-            //case Sign.MAX_50_c:
-            //    sObject.transform.FindChild("A1-050").gameObject.SetActive(true);
-            //    break;
-            //case Sign.MAX_80_c:
-            //    sObject.transform.FindChild("A1-080").gameObject.SetActive(true);
-            //    break;
+            case "c_MAXSPEED_50":
+                try
+                {
+                    sObject.transform.FindChild("MAX_50_c").gameObject.SetActive(true);
+                }
+                catch { MessageBox.Show("allicht niet"); }
+                break;
+            case "c_MAXSPEED_80":
+                try
+                {
+                    sObject.transform.FindChild("MAX_80_c").gameObject.SetActive(true);
+                }
+                catch { MessageBox.Show("allicht niet"); }
+                break;
             //case Sign.NO_ENTRY_1WAY_c:
             //    sObject.transform.FindChild("C2").gameObject.SetActive(true);
             //    break;

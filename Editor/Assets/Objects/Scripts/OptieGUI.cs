@@ -716,10 +716,10 @@ public class OptieGUI : MonoBehaviour
                 rulename = "c_MAXSPEED_30";
                 break;
             case "Max speed 50":
-                rulename = "MAXSPEED_50";
+                rulename = "c_MAXSPEED_50";
                 break;
             case "Max speed 80":
-                rulename = "MAXSPEED_80";
+                rulename = "c_MAXSPEED_80";
                 break;
             case "No entry two way":
                 rulename = "NO_ENTRY_2_WAY";
