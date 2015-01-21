@@ -3,42 +3,11 @@ Base path: D:/UnityInstaled/Editor/Data
 Pipe name: \\.\pipe\UnityShaderCompiler-1-2488
 Cmd: getPlatforms
 =======
-Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-1212
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-4376
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=2022 outsize=638 ok=1
-Cmd: preprocess
-  insize=2172 outsize=624 ok=1
-Cmd: preprocess
-  insize=1511 outsize=581 ok=1
-Cmd: preprocess
-  insize=9251 outsize=1204 ok=1
-Cmd: preprocess
-  insize=1773 outsize=674 ok=1
-Cmd: preprocess
-  insize=1729 outsize=630 ok=1
-Cmd: preprocess
-  insize=1277 outsize=473 ok=1
-Cmd: preprocess
-  insize=686 outsize=1313 ok=1
-Cmd: preprocess
-  insize=1558 outsize=547 ok=1
-Cmd: preprocess
-  insize=889 outsize=396 ok=1
-Cmd: preprocess
-  insize=734 outsize=494 ok=1
-Cmd: preprocess
-  insize=623 outsize=623 ok=1
-Cmd: preprocess
-  insize=873 outsize=447 ok=1
-Cmd: preprocess
-  error: 1 plat 12 at (100): Compiling shaders to OpenGL ES 2.0, Xbox 360, PS3, Flash or DX11 requires both vertex and fragment programs
-  insize=2780 outsize=1538 ok=1
-Cmd: preprocess
-  insize=487 outsize=487 ok=1
-Cmd: preprocess
-  insize=941 outsize=317 ok=1
-Cmd: preprocess
-  insize=1406 outsize=783 ok=1
->>>>>>> eddy'sBranch
+Unhandled exception: Readfile from pipe failed. GLE=De pipe is beëindigd.
+
+
+Quitting shader compiler process
+>>>>>>> origin/latest
