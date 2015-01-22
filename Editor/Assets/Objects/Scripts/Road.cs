@@ -23,8 +23,8 @@ public class Road : MonoBehaviour
         s_ADVICESPEED_50,
         s_ADVICESPEED_80,
 
-        d_PRIORITY_START,
-        d_PRIORITY_END
+        //d_PRIORITY_START,
+        //d_PRIORITY_END
     }
 	;
 

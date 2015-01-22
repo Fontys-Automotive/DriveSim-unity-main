@@ -483,13 +483,13 @@ public class OptieGUI : MonoBehaviour
                     signItem.Click += new EventHandler(signItem_Click);
                     submenuSigns.DropDownItems.Add(signItem);
                     signItem = new ToolStripMenuItem();
-                    signItem.Text = "Priority start";
-                    signItem.Click += new EventHandler(signItem_Click);
-                    submenuSigns.DropDownItems.Add(signItem);
-                    signItem = new ToolStripMenuItem();
-                    signItem.Text = "Priority end";
-                    signItem.Click += new EventHandler(signItem_Click);
-                    submenuSigns.DropDownItems.Add(signItem);
+                    //signItem.Text = "Priority start";
+                    //signItem.Click += new EventHandler(signItem_Click);
+                    //submenuSigns.DropDownItems.Add(signItem);
+                    //signItem = new ToolStripMenuItem();
+                    //signItem.Text = "Priority end";
+                    //signItem.Click += new EventHandler(signItem_Click);
+                    //submenuSigns.DropDownItems.Add(signItem);
 
                     submenuSigns.DropDownItems.Add(signItem);
                     menu.Items.Add(submenuSigns);
@@ -750,12 +750,12 @@ public class OptieGUI : MonoBehaviour
             case "Advice speed 80":
                 rulename = "s_ADVICESPEED_80";
                 break;
-            case "Priority start":
-                rulename = "d_PRIORITY_START";
-                break;
-            case "Priority end":
-                rulename = "d_PRIORITY_END";
-                break;
+            //case "Priority start":
+            //    rulename = "d_PRIORITY_START";
+            //    break;
+            //case "Priority end":
+            //    rulename = "d_PRIORITY_END";
+            //    break;
         }
         wegRegel = rulename;
         SaveRoadSettings();
