@@ -197,8 +197,7 @@ public class Road : MonoBehaviour
         {
             sObject = this.transform.FindChild("Verkeersborden").gameObject;
             foreach (Transform t in sObject.transform)
-            {
-                MessageBox.Show(t.name);
+            {      
                 t.gameObject.SetActive(false);
             }
         }
@@ -206,12 +205,6 @@ public class Road : MonoBehaviour
         {
             return;
         }
-
-        //r is round
-        //t is triangle
-        //stop is stop
-        //s is square
-        //45 is diamond
         //Check what category needs to be enabled
         string shape = "";
         string[] words = new string[] { };
@@ -238,6 +231,9 @@ public class Road : MonoBehaviour
         //		//Check for each sign what models need to be enabled etc.
         switch (this.ruleset.ToString())
         {
+            case "NO_SIGN":
+                sObject.transform.FindChild("Pole").gameObject.SetActive(false);
+                break;
             case "c_MAXSPEED_30":
                 try
                 {
